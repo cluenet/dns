@@ -139,8 +139,6 @@ lindelof.external.cluenet.org.  IN A 24.40.136.140
 lindelof.external.cluenet.org.  IN AAAA 2002:1828:88fb:0:dcad:beff:feef:205
 lindelof.internal.cluenet.org.  IN A 10.156.12.120
 mail.cluenet.org.  IN CNAME ghs.google.com.
-monitoring.cluenet.org.  IN CNAME delta.cluenet.org.
-nagios.cluenet.org.  IN CNAME sine.cluenet.org.
 ns1.cluenet.org.  IN A 70.85.16.91
 ns2.cluenet.org.  IN A 67.23.224.99
 ns3.cluenet.org.  IN A 24.40.136.140
@@ -187,7 +185,6 @@ rwho.cluenet.org.   CNAME virgule.cluenet.org.
 search.cluenet.org.  IN CNAME equal.cluenet.org.
 servers.cluenet.org.  IN CNAME hex.cluenet.org.
 sigma.cluenet.org.  IN A 74.207.250.111
-sine.external.cluenet.org.  IN A 109.74.192.129
 square.cluenet.org.  IN A 24.40.136.140
 square.cluenet.org.  IN AAAA 2002:1828:88fb:0:20e:7fff:fef0:3b93
 square.external.cluenet.org.  IN A 24.40.136.140
@@ -208,7 +205,6 @@ tonybhome.internal.cluenet.org.  IN A 10.156.4.33
 union.cluenet.org.  IN CNAME union.davenull.us.
 union.external.cluenet.org.  IN CNAME union.davenull.us.
 useradm.api.cluenet.org.  IN CNAME integral.cluenet.org.
-users.cluenet.org.  IN CNAME delta.cluenet.org.
 velocity.cluenet.org.  IN A 97.107.132.155
 velocity.cluenet.org.  IN AAAA 2600:3c03::f03c:91ff:fe96:23d
 virgule.cluenet.org.  IN A 109.74.192.129
