@@ -206,4 +206,3 @@ _ldap._tcp.cluenet.org.   SRV 0 0 389 radian.cluenet.org.
 _ldap._tcp.cluenet.org.   SRV 0 0 389 virgule.cluenet.org.
 _xmpp-client._tcp.cluenet.org.  IN SRV 10 0 5222 xmpp.cluenet.org.
 _xmpp-server._tcp.cluenet.org.  IN SRV 10 0 5269 xmpp.cluenet.org.
-schroedinger.cluenet.org. IN CNAME ec2-107-20-84-49.compute-1.amazonaws.com.
