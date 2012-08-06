@@ -55,7 +55,6 @@ asymptote.cluenet.org.  IN CNAME hcms.dnsalias.org.
 asymptote.external.cluenet.org.  IN CNAME hcms.dnsalias.org.
 bridge.abacus.cluenet.org.  IN AAAA 2001:470:8188:0:21a:70ff:fee1:c9d3
 cluebot.cluenet.org.  IN CNAME cubed.cluenet.org.
-cluevpn.api.cluenet.org.  IN CNAME integral.cluenet.org.
 Cobi.cluenet.org.  IN A 24.40.136.140
 Cobi.cluenet.org.  IN AAAA 2002:1828:88fb:0:aede:48ff:febe:ef03
 Cobi.external.cluenet.org.  IN A 24.40.136.140
@@ -78,7 +77,6 @@ cubed.internal.cluenet.org.  IN A 10.156.1.7
 dalektric.abacus.cluenet.org.  IN AAAA 2001:470:8188:0:20f:37ff:fe42:92f4
 digit.cluenet.org.  IN A 80.45.149.194
 digit.cluenet.org.  IN AAAA 2001:470:1f08:17e::2
-dns.api.cluenet.org.  IN CNAME integral.cluenet.org.
 equal.cluenet.org.  IN A 109.74.200.177
 equal.cluenet.org.  IN AAAA 2a01:7e00::f03c:91ff:fe96:53e1
 eta.cluenet.org.  IN A 109.174.56.27
@@ -94,7 +92,6 @@ hawking.external.cluenet.org.  IN CNAME hawking.vr.lt.
 hex.cluenet.org.  IN A 109.74.199.212
 hex.external.cluenet.org.  IN A 109.74.199.212
 host.equal.cluenet.org.  IN A 109.74.207.16
-hostadm.api.cluenet.org.  IN CNAME integral.cluenet.org.
 id.cluenet.org.  IN CNAME radian.cluenet.org.
 induction.cluenet.org.  IN A 70.87.222.121
 induction.cluenet.org.  IN AAAA 2002:4657:de79::1
@@ -145,7 +142,6 @@ pi.cluenet.org.  IN AAAA 2002:1828:88fb:0:250:8bff:fe91:576
 pi.external.cluenet.org.  IN A 24.40.136.140
 pi.external.cluenet.org.  IN AAAA 2002:1828:88fb:0:250:8bff:fe91:576
 pi.internal.cluenet.org.  IN A 10.156.12.10
-privapp.api.cluenet.org.  IN CNAME integral.cluenet.org.
 projects.cluenet.org.  IN CNAME cubed.cluenet.org.
 pyramid.external.cluenet.org.  IN A 97.107.142.96
 pyramid.external.cluenet.org.  IN AAAA 2002:616b:8e60:0:b00b:dead:beef:b00b
@@ -180,7 +176,6 @@ theta.external.cluenet.org.  IN A 24.40.136.140
 theta.external.cluenet.org.  IN AAAA 2002:1828:88fb:0:dcad:beff:feef:206
 theta.internal.cluenet.org.  IN A 10.156.12.4
 tonybhome.internal.cluenet.org.  IN A 10.156.4.33
-useradm.api.cluenet.org.  IN CNAME integral.cluenet.org.
 virgule.cluenet.org.  IN A 109.74.192.129
 virgule.cluenet.org.  IN AAAA 2a01:7e00::f03c:91ff:fe96:5efd
 voip.cluenet.org.  IN A 78.129.140.218
