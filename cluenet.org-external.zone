@@ -53,7 +53,6 @@ api.cluebot.cluenet.org.  IN A 91.121.99.184
 astroid.cluenet.org.  IN A 83.67.107.164
 asymptote.cluenet.org.  IN CNAME hcms.dnsalias.org.
 asymptote.external.cluenet.org.  IN CNAME hcms.dnsalias.org.
-auth.cluenet.org.   CNAME equal.cluenet.org.
 bridge.abacus.cluenet.org.  IN AAAA 2001:470:8188:0:21a:70ff:fee1:c9d3
 cluebot.cluenet.org.  IN CNAME cubed.cluenet.org.
 cluevpn.api.cluenet.org.  IN CNAME integral.cluenet.org.
@@ -105,9 +104,8 @@ integral.cluenet.org.  IN A 64.85.164.142
 irc.cluenet.org.  IN A 70.85.16.91
 irc.cluenet.org.  IN A 109.74.192.129
 irc.cluenet.org.  IN AAAA 2a01:7e00::f03c:91ff:fe96:5efd
-irc.external.cluenet.org.  IN A 109.74.192.129
-irc4.cluenet.org.  IN A 24.40.136.140
-irc4.cluenet.org.  IN A 109.74.192.129
+irc.external.cluenet.org.  IN CNAME irc.cluenet.org.
+irc4.cluenet.org.  IN CNAME irc.cluenet.org.
 junction.cluenet.org.  IN A 69.64.10.59
 kerberos.cluenet.org.  IN A 109.74.192.129
 kerberos.cluenet.org.  IN AAAA 2a01:7e00::f03c:91ff:fe96:5efd
@@ -136,11 +134,8 @@ ordinate.cluenet.org.  IN AAAA 2002:1828:88fb:0:dcad:beff:feef:204
 ordinate.external.cluenet.org.  IN A 24.40.136.140
 ordinate.external.cluenet.org.  IN AAAA 2002:1828:88fb:0:dcad:beff:feef:204
 ordinate.internal.cluenet.org.  IN A 10.156.12.7
-origin.cluenet.org.  IN CNAME union.davenull.us.
-origin.external.cluenet.org.  IN CNAME union.davenull.us.
 oscillator.cluenet.org.  IN CNAME oscillator.cs.uiuc.edu.
 oscillator.external.cluenet.org.  IN CNAME oscillator.cs.uiuc.edu.
-paste.cluenet.org.  IN CNAME linear.cluenet.org.
 phi.cluenet.org.  IN A 24.40.136.140
 phi.cluenet.org.  IN AAAA 2002:1828:88fb:0:204:5aff:fe66:aac2
 phi.external.cluenet.org.  IN A 24.40.136.140
@@ -167,7 +162,6 @@ report.cluebot.cluenet.org.  IN CNAME bots.wmflabs.org.
 review.cluebot.cluenet.org.  IN CNAME ghs.google.com.
 rwho.cluenet.org.   CNAME virgule.cluenet.org.
 search.cluenet.org.  IN CNAME equal.cluenet.org.
-servers.cluenet.org.  IN CNAME hex.cluenet.org.
 sigma.cluenet.org.  IN A 74.207.250.111
 square.cluenet.org.  IN A 24.40.136.140
 square.cluenet.org.  IN AAAA 2002:1828:88fb:0:20e:7fff:fef0:3b93
@@ -186,11 +180,7 @@ theta.external.cluenet.org.  IN A 24.40.136.140
 theta.external.cluenet.org.  IN AAAA 2002:1828:88fb:0:dcad:beff:feef:206
 theta.internal.cluenet.org.  IN A 10.156.12.4
 tonybhome.internal.cluenet.org.  IN A 10.156.4.33
-union.cluenet.org.  IN CNAME union.davenull.us.
-union.external.cluenet.org.  IN CNAME union.davenull.us.
 useradm.api.cluenet.org.  IN CNAME integral.cluenet.org.
-velocity.cluenet.org.  IN A 97.107.132.155
-velocity.cluenet.org.  IN AAAA 2600:3c03::f03c:91ff:fe96:23d
 virgule.cluenet.org.  IN A 109.74.192.129
 virgule.cluenet.org.  IN AAAA 2a01:7e00::f03c:91ff:fe96:5efd
 voip.cluenet.org.  IN A 78.129.140.218
