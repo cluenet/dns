@@ -70,9 +70,6 @@ cobihome.xcp.cluenet.org.  IN CNAME cobihome.cluenet.org.
 core.cluenet.org.  IN CNAME www.cluenet.org.
 cosine.cluenet.org.  IN A 69.61.141.122
 cosine.external.cluenet.org.  IN A 69.61.141.122
-cubed.cluenet.org.  IN A 94.23.28.71
-cubed.cluenet.org.  IN AAAA 2001:41d0:2:1d47::1
-cubed.internal.cluenet.org.  IN A 10.156.1.7
 dalektric.abacus.cluenet.org.  IN AAAA 2001:470:8188:0:20f:37ff:fe42:92f4
 digit.cluenet.org.  IN A 80.45.149.194
 digit.cluenet.org.  IN AAAA 2001:470:1f08:17e::2
@@ -100,14 +97,11 @@ integral.cluenet.org.  IN A 64.85.164.142
 irc.cluenet.org.  IN A 70.85.16.91
 irc.cluenet.org.  IN A 109.74.192.129
 irc.cluenet.org.  IN AAAA 2a01:7e00::f03c:91ff:fe96:5efd
-irc.external.cluenet.org.  IN CNAME irc.cluenet.org.
 irc4.cluenet.org.  IN CNAME irc.cluenet.org.
 junction.cluenet.org.  IN A 69.64.10.59
 kerberos.cluenet.org.  IN A 109.74.192.129
 kerberos.cluenet.org.  IN AAAA 2a01:7e00::f03c:91ff:fe96:5efd
 krb5-admin.cluenet.org.   CNAME radian.cluenet.org.
-kvirc.cluenet.org.  IN CNAME null.cluenet.org.
-kvirc2.cluenet.org.  IN CNAME cubed.cluenet.org.
 lambda.cluenet.org.  IN A 69.54.4.175
 lambda.external.cluenet.org.  IN A 69.54.4.175
 ldap.cluenet.org.  IN CNAME radian.cluenet.org.
@@ -120,9 +114,6 @@ mail.cluenet.org.  IN CNAME ghs.google.com.
 ns1.cluenet.org.  IN A 70.85.16.91
 ns2.cluenet.org.  IN A 67.23.224.99
 ns3.cluenet.org.  IN A 24.40.136.140
-null.cluenet.org.  IN A 176.31.96.43
-null.cluenet.org.  IN AAAA 2001:41d0:8:112b::1
-null.external.cluenet.org.  IN A 176.31.96.43
 octagon.cluenet.org.  IN A 98.222.53.62
 octal.cluenet.org.  IN A 69.61.15.117
 ordinate.cluenet.org.  IN A 24.40.136.140
