@@ -20,7 +20,7 @@ $ORIGIN                           .
 
 $TTL                              10800
 ;
-cluenet.org.  IN SOA ns1.cluenet.org. hostmaster.cluenet.org. 1342563886 3600 900 1209600 300
+cluenet.org.  IN SOA ns1.cluenet.org. hostmaster.cluenet.org. 1342563887 3600 900 1209600 300
 cluenet.org.  IN NS ns1.cluenet.org.
 nstx.hawking.cluenet.org.  IN NS hawking.cluenet.org.
 cluenet.org.  IN NS ns2.cluenet.org.
@@ -182,22 +182,17 @@ wiki.cluenet.org.  IN CNAME radian.cluenet.org.
 www.cluenet.org.  IN CNAME core.cluenet.org.
 www.cobi.cluenet.org.  IN CNAME ghs.google.com.
 xmpp.cluenet.org.  IN A 109.74.200.177
-_kerberos-adm._tcp.cluenet.org.   SRV 5 0 749 null.cluenet.org.
-_kerberos-adm._tcp.cluenet.org.   SRV 0 0 749 radian.cluenet.org.
 _kerberos-adm._tcp.cluenet.org.   SRV 0 0 749 virgule.cluenet.org.
+_kerberos-adm._tcp.cluenet.org.   SRV 10 0 749 radian.cluenet.org.
 _kerberos.cluenet.org.   TXT "CLUENET.ORG"
-_kerberos._tcp.cluenet.org.   SRV 0 0 88 radian.cluenet.org.
 _kerberos._tcp.cluenet.org.   SRV 0 0 88 virgule.cluenet.org.
-_kerberos._tcp.cluenet.org.   SRV 5 0 88 null.cluenet.org.
-_kerberos._udp.cluenet.org.   SRV 5 0 88 null.cluenet.org.
+_kerberos._tcp.cluenet.org.   SRV 10 0 88 radian.cluenet.org.
 _kerberos._udp.cluenet.org.   SRV 0 0 88 virgule.cluenet.org.
-_kerberos._udp.cluenet.org.   SRV 0 0 88 radian.cluenet.org.
+_kerberos._udp.cluenet.org.   SRV 10 0 88 radian.cluenet.org.
 _kpasswd._udp.cluenet.org.   SRV 0 0 464 virgule.cluenet.org.
-_kpasswd._udp.cluenet.org.   SRV 5 0 464 null.cluenet.org.
-_kpasswd._udp.cluenet.org.   SRV 0 0 464 radian.cluenet.org.
-_ldap._tcp.cluenet.org.   SRV 5 0 389 null.cluenet.org.
-_ldap._tcp.cluenet.org.   SRV 0 0 389 radian.cluenet.org.
+_kpasswd._udp.cluenet.org.   SRV 10 0 464 radian.cluenet.org.
 _ldap._tcp.cluenet.org.   SRV 0 0 389 virgule.cluenet.org.
+_ldap._tcp.cluenet.org.   SRV 10 0 389 radian.cluenet.org.
 _xmpp-client._tcp.cluenet.org.  IN SRV 10 0 5222 xmpp.cluenet.org.
 _xmpp-server._tcp.cluenet.org.  IN SRV 10 0 5269 xmpp.cluenet.org.
 auth.cluenet.org. CNAME equal.cluenet.org.
