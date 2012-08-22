@@ -36,7 +36,7 @@ cluenet.org.  IN AAAA 2001:4978:22a:0:20c:29ff:fe0a:3fb4
 cluenet.org.  IN MX 30 ASPMX4.GOOGLEMAIL.COM.
 cluenet.org.  IN MX 20 ALT2.ASPMX.L.GOOGLE.COM.
 *.g.cluenet.org.  IN CNAME ghs.google.com.
-a.core.cluenet.org.  IN CNAME radian.cluenet.org.
+a.core.cluenet.org.  IN CNAME core.cluenet.org.
 abacus.cluenet.org.  IN A 50.76.35.186
 abacus.cluenet.org.  IN AAAA 2001:470:8188:bbbb:250:43ff:fe01:dd3f
 abacus.external.cluenet.org.  IN CNAME jercos.dyndns.org.
@@ -67,7 +67,7 @@ cobihome.cluenet.org.  IN A 24.40.136.140
 cobihome.external.cluenet.org.  IN A 24.40.136.140
 cobihome.internal.cluenet.org.  IN A 10.156.12.6
 cobihome.xcp.cluenet.org.  IN CNAME cobihome.cluenet.org.
-core.cluenet.org.  IN CNAME a.core.cluenet.org.
+core.cluenet.org.  IN CNAME www.cluenet.org.
 cosine.cluenet.org.  IN A 69.61.141.122
 cosine.external.cluenet.org.  IN A 69.61.141.122
 cubed.cluenet.org.  IN A 94.23.28.71
@@ -179,7 +179,7 @@ virgule.cluenet.org.  IN A 109.74.192.129
 virgule.cluenet.org.  IN AAAA 2a01:7e00::f03c:91ff:fe96:5efd
 voip.cluenet.org.  IN A 78.129.140.218
 wiki.cluenet.org.  IN CNAME radian.cluenet.org.
-www.cluenet.org.  IN CNAME core.cluenet.org.
+www.cluenet.org.  IN CNAME radian.cluenet.org.
 www.cobi.cluenet.org.  IN CNAME ghs.google.com.
 xmpp.cluenet.org.  IN A 109.74.200.177
 _kerberos-adm._tcp.cluenet.org.   SRV 0 0 749 virgule.cluenet.org.
