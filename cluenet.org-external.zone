@@ -20,7 +20,7 @@ $ORIGIN                           .
 
 $TTL                              10800
 ;
-cluenet.org.  IN SOA ns1.cluenet.org. hostmaster.cluenet.org. 1342563887 3600 900 1209600 300
+cluenet.org.  IN SOA ns1.cluenet.org. hostmaster.cluenet.org. 1342563889 3600 900 1209600 300
 cluenet.org.  IN NS ns1.cluenet.org.
 nstx.hawking.cluenet.org.  IN NS hawking.cluenet.org.
 cluenet.org.  IN NS ns2.cluenet.org.
@@ -47,7 +47,7 @@ abscissa.external.cluenet.org.  IN AAAA 2002:1828:88fb:0:dcad:beff:feef:202
 abscissa.internal.cluenet.org.  IN A 10.156.12.6
 absval.cluenet.org.  IN A 69.61.141.122
 absval.external.cluenet.org.  IN A 69.61.141.122
-aleph.cluenet.org.  IN A 94.194.59.42
+aleph.cluenet.org.  IN A 46.65.55.28
 alpha.cluenet.org.  IN CNAME fox.snofox.net.
 astroid.cluenet.org.  IN A 83.67.107.164
 asymptote.cluenet.org.  IN CNAME hcms.dnsalias.org.
