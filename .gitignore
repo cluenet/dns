@@ -1,0 +1,4 @@
+managed-keys.bind
+*.jnl
+*.jbk
+*.signed
