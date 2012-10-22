@@ -1,0 +1,226 @@
+; vim: ft=bindzone:ts=8:sw=8:nowrap:noet:
+$ORIGIN cluenet.org.
+$TTL 2h
+
+@	SOA	ns1 hostmaster (
+			1350926291	; serial
+			1h		; refresh
+			900		; retry
+			1209600		; expire
+			300		; minttl
+		)
+
+	; TODO: need to update glue records in dynadot
+	; TODO: out-of-domain nameservers
+	NS	equal
+	NS	radian
+	NS	virgule
+
+	MX	10 ASPMX.L.GOOGLE.COM.
+	MX	20 ALT1.ASPMX.L.GOOGLE.COM.
+	MX	20 ALT2.ASPMX.L.GOOGLE.COM.
+	MX	30 ASPMX2.GOOGLEMAIL.COM.
+	MX	30 ASPMX3.GOOGLEMAIL.COM.
+	MX	30 ASPMX4.GOOGLEMAIL.COM.
+	MX	30 ASPMX5.GOOGLEMAIL.COM.
+
+	TXT	"v=spf1 a mx ptr ~all"
+
+*.g	CNAME	ghs.google.com.
+
+dlv	0 TXT	"DLV:1:oravbfsalwvb"
+
+;; service SRV records and round-robins
+
+_kerberos		TXT	"CLUENET.ORG"
+
+_irc._tcp		SRV	0	0	6667	virgule
+_irc._tcp		SRV	0	0	6667	radian
+
+_ircs._tcp		SRV	0	0	6697	virgule
+_ircs._tcp		SRV	0	0	6697	radian
+
+_kerberos._udp		SRV	0	0	88	virgule
+_kerberos._udp		SRV	0	0	88	radian
+
+_kerberos._tcp		SRV	0	0	88	virgule
+_kerberos._tcp		SRV	0	0	88	radian
+
+_kerberos-adm._tcp	SRV	0	0	749	virgule
+_kerberos-adm._tcp	SRV	0	0	749	radian
+
+_kpasswd._udp		SRV	0	0	464	virgule
+_kpasswd._udp		SRV	0	0	464	radian
+
+_ldap._tcp		SRV	0	0	389	virgule
+_ldap._tcp		SRV	0	0	389	radian
+
+_xmpp-client._tcp	SRV	10	0	5222	equal
+
+_xmpp-server._tcp	SRV	10	0	5269	equal
+
+irc		A	70.85.16.91			; radian
+irc		A	109.74.192.129			; virgule
+irc		AAAA	2a01:7e00::f03c:91ff:fe96:5efd	; virgule
+
+kerberos	A	109.74.192.129			; virgule
+kerberos	AAAA	2a01:7e00::f03c:91ff:fe96:5efd	; virgule
+
+;; service subdomains
+
+cluebot		CNAME	virgule
+report.cluebot	CNAME	bots.wmflabs.org.
+review.cluebot	CNAME	ghs.google.com.
+
+auth		CNAME	equal
+core		CNAME	www
+a.core		CNAME	www
+id		CNAME	radian
+irc4		CNAME	irc
+krb5-admin	CNAME	kerberos
+ldap		CNAME	radian ; currently only radian because of SSL cert (TODO)
+mail		CNAME	ghs.google.com.
+projects	CNAME	cubed
+remoteincludes	CNAME	oscillator
+rwho		CNAME	virgule
+search		CNAME	equal
+ssl		CNAME	oscillator
+svn		CNAME	radian
+syslog		CNAME	radian
+teamforkbomb	CNAME	oscillator
+voip		A	78.129.140.218
+wiki		CNAME	radian
+www		CNAME	radian
+
+;; servers
+
+abacus			A	50.76.35.186
+abacus			AAAA	2001:470:8188:bbbb:250:43ff:fe01:dd3f
+bridge.abacus		AAAA	2001:470:8188:0:21a:70ff:fee1:c9d3
+dalektric.abacus	AAAA	2001:470:8188:0:20f:37ff:fe42:92f4
+
+abscissa	A	24.40.136.140
+abscissa	AAAA	2002:1828:88fb:0:dcad:beff:feef:202
+
+absval		A	69.61.141.122
+
+aleph		A	46.65.55.28
+
+alpha		CNAME	fox.snofox.net.
+
+astroid		A	83.67.107.164
+
+asymptote	CNAME	hcms.dnsalias.org.
+
+cosine		A	69.61.141.122
+
+digit		A	80.45.149.194
+digit		AAAA	2001:470:1f08:17e::2
+
+equal		A	109.74.200.177
+equal		AAAA	2a01:7e00::f03c:91ff:fe96:53e1
+		SSHFP	1 1 94f462031c17fd95c6613b6fa5c4f9c73156dcce
+		SSHFP	1 2 6bbd71cefe8392f3f5d1a636545e9d601cacc3bcf534b8b5e18fce85523cd430
+		SSHFP	2 1 03d81eb81d0fd2d188019cb59c8542b892688189
+		SSHFP	2 2 c185843949355b5a83e550cbd3696f150752d86fe5770695d6f5a627d15309e2
+		SSHFP	3 1 b4afd58a28c2012fff4d8a19936017f1f4d04e27
+		SSHFP	3 2 0e6309745cb3d56300f2d2d289f7095b8c8527316c92d9033a44b6d860743a80
+host.equal	A	109.74.207.16
+
+eta		A	109.174.56.27
+eta		AAAA	2001:67c:2158:a027::2
+		SSHFP	1 1 4b707138ec1e0387d5d5103d59a1f97905bbae8e
+		SSHFP	1 2 c0300ab1b7281d8232361dfe0eed6f37b10b267a24c3b4953664f3a2b8494908
+		SSHFP	2 1 c767d6d88002d99c88d545600be26e63c3c23f6e
+		SSHFP	2 2 f7f1bc08f51cb4ed1e14ee1624590658a1f4afd9ff538291aa75d16efd543637
+
+euclid		A	24.40.136.140
+euclid		AAAA	2002:1828:88fb:0:240:5ff:fe10:46b8
+
+gamma		CNAME	gamma.thehawken.org.
+
+hawking		A	46.105.138.6
+		SSHFP	1 1 60f25057945d6cab589e552c8b9968900994a00f
+		SSHFP	1 2 22fd110f6bbd5ad64d8be37eab2b97c72907516dfbc639d7ccd1cf4e8816b51a
+		SSHFP	2 1 c6103710c3ff22114a593b1252df6536f998673e
+		SSHFP	2 2 deff8ee83f96eebaa04bcb9fa96af757f6dd0d439ffb5bc67a30e6ffaa51592e
+nstx.hawking	NS	hawking
+
+hex		A	109.74.199.212
+
+induction	A	70.87.222.121
+induction	AAAA	2002:4657:de79::1
+
+integral	A	64.85.164.142
+
+junction	A	69.64.10.59
+
+lambda		A	69.54.4.175
+
+lindelof	A	24.40.136.140
+lindelof	AAAA	2002:1828:88fb:0:dcad:beff:feef:205
+
+negative	CNAME	negative.mypopmadness.com.
+;		SSHFP	1 1 395f512a586d0b712d934a54c67cd5d77d07b8e2
+;		SSHFP	1 2 235c92aa6b7a08a8b6b8d56eb0a5df909c488226dd2baa4d2ab59177b298dfe6
+;		SSHFP	2 1 1f9f2927b29bad145f6cb024c717e49bca390b13
+;		SSHFP	2 2 40d5f68f42e609dcc2bb8f029aea2a49bcc8c8b93b905973ea8785a5e9bb7c0d
+
+octagon		A	98.222.53.62
+
+octal		A	69.61.15.117
+
+ordinate	A	24.40.136.140
+ordinate	AAAA	2002:1828:88fb:0:dcad:beff:feef:204
+
+oscillator	CNAME	oscillator.cs.uiuc.edu.
+
+phi		A	24.40.136.140
+phi		AAAA	2002:1828:88fb:0:204:5aff:fe66:aac2
+
+pi		A	24.40.136.140
+pi		AAAA	2002:1828:88fb:0:250:8bff:fe91:576
+
+radian		A	70.85.16.91
+radian		AAAA	2001:470:1f0f:112c::1
+		SSHFP	1 1 dfad6066be121cf36c7741fcb6aab14f46d11450
+		SSHFP	1 2 76afdca3d755034c8f8d444e81c9e1ab5d8fbcab4544b58e9e59ee27f91255b0
+		SSHFP	2 1 e134a933d1126d91abead05fa34dae1397ca7ea8
+		SSHFP	2 2 65981d7fd79bd997a3ed3fae1a7176cf281f745216a69f74861d39bc6a7b1e
+@		A	70.85.16.91
+@		AAAA	2001:4978:22a:0:20c:29ff:fe0a:3fb4
+ns1		A	70.85.16.91
+
+radon		A	81.89.97.56
+
+rectangle	A	24.40.136.140
+rectangle	AAAA	2002:1828:88fb:0:20b:cdff:fe9c:b85d
+
+sigma		A	74.207.250.111
+
+square		A	24.40.136.140
+square		AAAA	2002:1828:88fb:0:20e:7fff:fef0:3b93
+
+terabit		A	117.103.173.155
+
+theta		A	24.40.136.140
+theta		AAAA	2002:1828:88fb:0:dcad:beff:feef:206
+
+virgule		A	109.74.192.129
+virgule		AAAA	2a01:7e00::f03c:91ff:fe96:5efd
+		SSHFP	1 1 666ff80e4f295f713238dc6246595898b15e85b1
+		SSHFP	1 2 711ae42074aa7bdb91237c98ef7b1c4dc5f5ded03815f402a9cc771a60f6ac3b
+		SSHFP	2 1 8abe00ee446f99d81bd2c18eb9352af2b416e5d3
+		SSHFP	2 2 36aef1e2b034d58b41a56c3634e463f204cf4d483c80a76fd07c436164970a57
+
+;; Cobi has his own section
+
+Cobi		A	24.40.136.140
+Cobi		AAAA	2002:1828:88fb:0:aede:48ff:febe:ef03
+www.cobi	CNAME	ghs.google.com.
+cobiapartment	A	98.212.147.161
+cobigw		A	24.40.136.140
+cobihome	A	24.40.136.140
+cobihome.xcp	CNAME	cobihome
+
+;; End.
