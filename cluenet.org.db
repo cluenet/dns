@@ -3,7 +3,7 @@ $ORIGIN cluenet.org.
 $TTL 2h
 
 @	SOA	ns1 hostmaster (
-			1350926291	; serial
+			1350926292	; serial
 			1h		; refresh
 			900		; retry
 			1209600		; expire
@@ -94,25 +94,13 @@ www		CNAME	radian
 
 ;; servers
 
-abacus			A	50.76.35.186
-abacus			AAAA	2001:470:8188:bbbb:250:43ff:fe01:dd3f
-bridge.abacus		AAAA	2001:470:8188:0:21a:70ff:fee1:c9d3
-dalektric.abacus	AAAA	2001:470:8188:0:20f:37ff:fe42:92f4
-
-abscissa	A	24.40.136.140
-abscissa	AAAA	2002:1828:88fb:0:dcad:beff:feef:202
-
-absval		A	69.61.141.122
-
 aleph		A	46.65.55.28
-
-alpha		CNAME	fox.snofox.net.
-
-astroid		A	83.67.107.164
-
-asymptote	CNAME	hcms.dnsalias.org.
-
-cosine		A	69.61.141.122
+		SSHFP	1 1 c8ef9609892203bcf73bae2619adfa1c31a88c11
+		SSHFP	1 2 d4dcfc0e17425945d89929dd7c948a5e399f08fadc6f66056e87046ee1bee4fd
+		SSHFP	2 1 a2898899e26281b585c37049704e3fa94aeb63cb
+		SSHFP	2 2 698bc044916f8999b44fc13b8403308a82c01daf91b668dd698b19bac7f57d8b
+		SSHFP	3 1 76471cb83e1c9281501016edcbe2a130d0bc8068
+		SSHFP	3 2 830f5f520b47d144003c84412c415f0cfc26609d466104ceecaddf9e15e93521
 
 digit		A	80.45.149.194
 digit		AAAA	2001:470:1f08:17e::2
@@ -134,53 +122,6 @@ eta		AAAA	2001:67c:2158:a027::2
 		SSHFP	2 1 c767d6d88002d99c88d545600be26e63c3c23f6e
 		SSHFP	2 2 f7f1bc08f51cb4ed1e14ee1624590658a1f4afd9ff538291aa75d16efd543637
 
-euclid		A	24.40.136.140
-euclid		AAAA	2002:1828:88fb:0:240:5ff:fe10:46b8
-
-gamma		CNAME	gamma.thehawken.org.
-
-hawking		A	46.105.138.6
-		SSHFP	1 1 60f25057945d6cab589e552c8b9968900994a00f
-		SSHFP	1 2 22fd110f6bbd5ad64d8be37eab2b97c72907516dfbc639d7ccd1cf4e8816b51a
-		SSHFP	2 1 c6103710c3ff22114a593b1252df6536f998673e
-		SSHFP	2 2 deff8ee83f96eebaa04bcb9fa96af757f6dd0d439ffb5bc67a30e6ffaa51592e
-nstx.hawking	NS	hawking
-
-hex		A	109.74.199.212
-
-induction	A	70.87.222.121
-induction	AAAA	2002:4657:de79::1
-
-integral	A	64.85.164.142
-
-junction	A	69.64.10.59
-
-lambda		A	69.54.4.175
-
-lindelof	A	24.40.136.140
-lindelof	AAAA	2002:1828:88fb:0:dcad:beff:feef:205
-
-negative	CNAME	negative.mypopmadness.com.
-;		SSHFP	1 1 395f512a586d0b712d934a54c67cd5d77d07b8e2
-;		SSHFP	1 2 235c92aa6b7a08a8b6b8d56eb0a5df909c488226dd2baa4d2ab59177b298dfe6
-;		SSHFP	2 1 1f9f2927b29bad145f6cb024c717e49bca390b13
-;		SSHFP	2 2 40d5f68f42e609dcc2bb8f029aea2a49bcc8c8b93b905973ea8785a5e9bb7c0d
-
-octagon		A	98.222.53.62
-
-octal		A	69.61.15.117
-
-ordinate	A	24.40.136.140
-ordinate	AAAA	2002:1828:88fb:0:dcad:beff:feef:204
-
-oscillator	CNAME	oscillator.cs.uiuc.edu.
-
-phi		A	24.40.136.140
-phi		AAAA	2002:1828:88fb:0:204:5aff:fe66:aac2
-
-pi		A	24.40.136.140
-pi		AAAA	2002:1828:88fb:0:250:8bff:fe91:576
-
 radian		A	70.85.16.91
 radian		AAAA	2001:470:1f0f:112c::1
 		SSHFP	1 1 dfad6066be121cf36c7741fcb6aab14f46d11450
@@ -191,20 +132,36 @@ radian		AAAA	2001:470:1f0f:112c::1
 @		AAAA	2001:4978:22a:0:20c:29ff:fe0a:3fb4
 ns1		A	70.85.16.91
 
-radon		A	81.89.97.56
+hawking		A	46.105.138.6
+		SSHFP	1 1 60f25057945d6cab589e552c8b9968900994a00f
+		SSHFP	1 2 22fd110f6bbd5ad64d8be37eab2b97c72907516dfbc639d7ccd1cf4e8816b51a
+		SSHFP	2 1 c6103710c3ff22114a593b1252df6536f998673e
+		SSHFP	2 2 deff8ee83f96eebaa04bcb9fa96af757f6dd0d439ffb5bc67a30e6ffaa51592e
+nstx.hawking	NS	hawking
 
-rectangle	A	24.40.136.140
-rectangle	AAAA	2002:1828:88fb:0:20b:cdff:fe9c:b85d
+hex		A	109.74.199.212
+		SSHFP	1 1 918f00b05cb0c124fc4110a9338c9c521388d38f
+		SSHFP	1 2 fc4e99ddfeadeea5d7b769d6cb890ea91f54a81e9a00d910cd1759e921a558ed
+		SSHFP	2 1 a02ed1d71050ddb02773aa7991aa91ad9ab733c5
+		SSHFP	2 2 1e5980f01fc7719f053376683907c8f1ef5b515d7561db03deccbf3e82f6cfe8
+
+negative	CNAME	negative.mypopmadness.com.
+;		SSHFP	1 1 395f512a586d0b712d934a54c67cd5d77d07b8e2
+;		SSHFP	1 2 235c92aa6b7a08a8b6b8d56eb0a5df909c488226dd2baa4d2ab59177b298dfe6
+;		SSHFP	2 1 1f9f2927b29bad145f6cb024c717e49bca390b13
+;		SSHFP	2 2 40d5f68f42e609dcc2bb8f029aea2a49bcc8c8b93b905973ea8785a5e9bb7c0d
+
+octal		A	69.61.15.117
+		SSHFP	1 1 59b545891394a1b8fb8449fae35a8b9b68bb0d37
+		SSHFP	1 2 c715af8733177de2fc4233521496ad9447a313b4b98bce1d31d2747da73006d8
+		SSHFP	2 1 f3077efa597cccb9e0ffcd351476b4227bf4e379
+		SSHFP	2 2 0924310ea4b37e701cda2b75f511d746c1842be606b95e4e8eb871e8c902062f
 
 sigma		A	74.207.250.111
-
-square		A	24.40.136.140
-square		AAAA	2002:1828:88fb:0:20e:7fff:fef0:3b93
-
-terabit		A	117.103.173.155
-
-theta		A	24.40.136.140
-theta		AAAA	2002:1828:88fb:0:dcad:beff:feef:206
+		SSHFP	1 1 4de6de12e46960207332eae919667a639390a2c9
+		SSHFP	1 2 1a2cf7ea464e1afd271812a7d05b98567bb48492f02bab0af599b155d6c982f7
+		SSHFP	2 1 8c773f92c254866efb42bd68d7c9db7411cd3f07
+		SSHFP	2 2 0793fe23bc6f03c4adb7f7ea60a49de62dbe7127a60dcbce6946ce73cdcd5654
 
 virgule		A	109.74.192.129
 virgule		AAAA	2a01:7e00::f03c:91ff:fe96:5efd
@@ -212,6 +169,91 @@ virgule		AAAA	2a01:7e00::f03c:91ff:fe96:5efd
 		SSHFP	1 2 711ae42074aa7bdb91237c98ef7b1c4dc5f5ded03815f402a9cc771a60f6ac3b
 		SSHFP	2 1 8abe00ee446f99d81bd2c18eb9352af2b416e5d3
 		SSHFP	2 2 36aef1e2b034d58b41a56c3634e463f204cf4d483c80a76fd07c436164970a57
+
+abacus			A	50.76.35.186
+abacus			AAAA	2001:470:8188:bbbb:250:43ff:fe01:dd3f
+; DOWN: does not accept ssh
+bridge.abacus		AAAA	2001:470:8188:0:21a:70ff:fee1:c9d3
+dalektric.abacus	AAAA	2001:470:8188:0:20f:37ff:fe42:92f4
+
+abscissa	A	24.40.136.140
+abscissa	AAAA	2002:1828:88fb:0:dcad:beff:feef:202
+; DOWN: host unreachable (Cobinet down)
+
+absval		A	69.61.141.122
+; DOWN: no ping, no ssh
+
+alpha		CNAME	fox.snofox.net.
+; DOWN: no such domain
+
+astroid		A	83.67.107.164
+; DOWN: routing loop
+
+asymptote	CNAME	hcms.dnsalias.org.
+; DOWN: does not accept ssh
+
+cosine		A	69.61.141.122
+; DOWN: no ping, no ssh
+
+euclid		A	24.40.136.140
+euclid		AAAA	2002:1828:88fb:0:240:5ff:fe10:46b8
+; DOWN: host unreachable (Cobinet down)
+
+gamma		CNAME	gamma.thehawken.org.
+; DOWN: no such domain
+
+induction	A	70.87.222.121
+induction	AAAA	2002:4657:de79::1
+; DOWN: no ping, no ssh
+
+integral	A	64.85.164.142
+; DOWN: refuses ssh
+
+junction	A	69.64.10.59
+; DOWN: host unreachable
+
+lambda		A	69.54.4.175
+; DOWN: routing loop
+
+lindelof	A	24.40.136.140
+lindelof	AAAA	2002:1828:88fb:0:dcad:beff:feef:205
+; DOWN: host unreachable (Cobinet down)
+
+octagon		A	98.222.53.62
+; DOWN: no ping, no ssh
+
+ordinate	A	24.40.136.140
+ordinate	AAAA	2002:1828:88fb:0:dcad:beff:feef:204
+; DOWN: host unreachable (Cobinet down)
+
+oscillator	CNAME	oscillator.cs.uiuc.edu.
+; DOWN: no ping, no ssh
+
+phi		A	24.40.136.140
+phi		AAAA	2002:1828:88fb:0:204:5aff:fe66:aac2
+; DOWN: host unreachable (Cobinet down)
+
+pi		A	24.40.136.140
+pi		AAAA	2002:1828:88fb:0:250:8bff:fe91:576
+; DOWN: host unreachable (Cobinet down)
+
+radon		A	81.89.97.56
+; DOWN: no ping, no ssh
+
+rectangle	A	24.40.136.140
+rectangle	AAAA	2002:1828:88fb:0:20b:cdff:fe9c:b85d
+; DOWN: host unreachable (Cobinet down)
+
+square		A	24.40.136.140
+square		AAAA	2002:1828:88fb:0:20e:7fff:fef0:3b93
+; DOWN: host unreachable (Cobinet down)
+
+terabit		A	117.103.173.155
+; DOWN: no ping, no ssh
+
+theta		A	24.40.136.140
+theta		AAAA	2002:1828:88fb:0:dcad:beff:feef:206
+; DOWN: host unreachable (Cobinet down)
 
 ;; Cobi has his own section
 
