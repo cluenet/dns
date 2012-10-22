@@ -3,7 +3,7 @@ $ORIGIN cluenet.org.
 $TTL 2h
 
 @	SOA	ns1 hostmaster (
-			1350926292	; serial
+			1350926293	; serial
 			1h		; refresh
 			900		; retry
 			1209600		; expire
@@ -137,7 +137,6 @@ hawking		A	46.105.138.6
 		SSHFP	1 2 22fd110f6bbd5ad64d8be37eab2b97c72907516dfbc639d7ccd1cf4e8816b51a
 		SSHFP	2 1 c6103710c3ff22114a593b1252df6536f998673e
 		SSHFP	2 2 deff8ee83f96eebaa04bcb9fa96af757f6dd0d439ffb5bc67a30e6ffaa51592e
-nstx.hawking	NS	hawking
 
 hex		A	109.74.199.212
 		SSHFP	1 1 918f00b05cb0c124fc4110a9338c9c521388d38f
