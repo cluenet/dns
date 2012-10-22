@@ -1,30 +1,12 @@
 ; vim: ft=bindzone
-;
-
-
-
-;
-
-;
 $ORIGIN                           .
-;
-;
-
-
-
-;
-
-
-
-
-
 $TTL                              10800
 ;
-cluenet.org.  IN SOA ns1.cluenet.org. hostmaster.cluenet.org. 1342563889 3600 900 1209600 300
-cluenet.org.  IN NS ns1.cluenet.org.
+cluenet.org.  IN SOA ns1.cluenet.org. hostmaster.cluenet.org. 1342563894 3600 900 1209600 300
 nstx.hawking.cluenet.org.  IN NS hawking.cluenet.org.
-cluenet.org.  IN NS ns2.cluenet.org.
-cluenet.org.  IN NS ns3.cluenet.org.
+cluenet.org. IN NS equal.cluenet.org.
+cluenet.org. IN NS radian.cluenet.org.
+cluenet.org. IN NS virgule.cluenet.org.
 cluenet.org.  IN MX 20 ALT1.ASPMX.L.GOOGLE.COM.
 cluenet.org.  IN MX 30 ASPMX5.GOOGLEMAIL.COM.
 cluenet.org.  IN A 70.85.16.91
@@ -112,8 +94,6 @@ lindelof.external.cluenet.org.  IN AAAA 2002:1828:88fb:0:dcad:beff:feef:205
 lindelof.internal.cluenet.org.  IN A 10.156.12.120
 mail.cluenet.org.  IN CNAME ghs.google.com.
 ns1.cluenet.org.  IN A 70.85.16.91
-ns2.cluenet.org.  IN A 67.23.224.99
-ns3.cluenet.org.  IN A 24.40.136.140
 octagon.cluenet.org.  IN A 98.222.53.62
 octal.cluenet.org.  IN A 69.61.15.117
 ordinate.cluenet.org.  IN A 24.40.136.140
@@ -159,7 +139,6 @@ svn.cluenet.org.  IN CNAME radian.cluenet.org.
 syslog.cluenet.org.  IN CNAME radian.cluenet.org.
 teamforkbomb.cluenet.org.  IN CNAME oscillator.cluenet.org.
 terabit.cluenet.org.  IN A 117.103.173.155
-test.core.cluenet.org.  IN CNAME octagon.cluenet.org.
 theta.cluenet.org.  IN A 24.40.136.140
 theta.cluenet.org.  IN AAAA 2002:1828:88fb:0:dcad:beff:feef:206
 theta.external.cluenet.org.  IN A 24.40.136.140
@@ -187,3 +166,5 @@ _ldap._tcp.cluenet.org.   SRV 10 0 389 radian.cluenet.org.
 _xmpp-client._tcp.cluenet.org.  IN SRV 10 0 5222 xmpp.cluenet.org.
 _xmpp-server._tcp.cluenet.org.  IN SRV 10 0 5269 xmpp.cluenet.org.
 auth.cluenet.org. CNAME equal.cluenet.org.
+dlv.cluenet.org. 0 IN TXT "DLV:1:oravbfsalwvb"
+
