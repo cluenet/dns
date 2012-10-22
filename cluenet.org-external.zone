@@ -2,7 +2,7 @@
 $ORIGIN                           .
 $TTL                              10800
 ;
-cluenet.org.  IN SOA ns1.cluenet.org. hostmaster.cluenet.org. 1342563894 3600 900 1209600 300
+cluenet.org.  IN SOA ns1.cluenet.org. hostmaster.cluenet.org. 1350926291 3600 900 1209600 300
 nstx.hawking.cluenet.org.  IN NS hawking.cluenet.org.
 cluenet.org. IN NS equal.cluenet.org.
 cluenet.org. IN NS radian.cluenet.org.
