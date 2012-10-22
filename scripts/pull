@@ -1,6 +1,3 @@
 #!/bin/sh
 
-cd /cluenet/dns &&
-git pull --ff-only &&
-named-checkzone 'cluenet.org' cluenet.org.db &&
-rndc reload cluenet.org
+cd /cluenet/dns && git pull --ff-only && make
