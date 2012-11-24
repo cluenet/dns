@@ -1,1 +1,3 @@
 script: "./scripts/check"
+notifications:
+  irc: "irc.cluenet.org#clueirc"
