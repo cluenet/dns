@@ -3,7 +3,7 @@ $ORIGIN cluenet.org.
 $TTL 2h
 
 @	SOA	ns1 hostmaster (
-			1350926295	; serial
+			1350926296	; serial
 			1h		; refresh
 			900		; retry
 			1209600		; expire
@@ -70,7 +70,7 @@ core		TXT	"Core server round-robin"
 		A	109.74.192.129			; virgule
 		AAAA	2a01:7e00::f03c:91ff:fe96:5efd	; virgule
 
-ldap		CNAME	radian	; switch to core when virgule has sAN
+ldap		CNAME	core
 kerberos	CNAME	core
 krb5-admin	CNAME	kerberos ; kill this
 
