@@ -1,10 +1,12 @@
 #!/usr/bin/env bash
 
+err=0
+
 for file in *.db; do
 	origin=$(awk '$1 == "$ORIGIN" {print $2; exit}' "$file")
 	if ! named-checkzone -j "$origin" "$file"; then
 		((++err))
 	fi
-done | grep -v '^OK$'
+done
 
 exit $err
