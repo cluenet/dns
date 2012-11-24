@@ -1,6 +1,14 @@
 before_install:
   - sudo apt-get update -qq
   - sudo apt-get install -qq bind9utils
-script: "./scripts/check"
+script: make check
 notifications:
-  irc: "irc.cluenet.org#clueirc"
+  irc:
+    channels:
+      - "irc.cluenet.org#clueirc"
+    skip_join: true
+  webhooks:
+    urls:
+      - "http://www.cluenet.org/etc/update-dns.php"
+    on_success: always
+    on_failure: never
