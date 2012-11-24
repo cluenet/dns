@@ -7,4 +7,4 @@ for file in *.db; do
 	fi
 done | grep -v '^OK$'
 
-! ((err))
+exit $err
