@@ -3,7 +3,7 @@ $ORIGIN cluenet.org.
 $TTL 2h
 
 @	SOA	ns1 hostmaster (
-			2013010102	; serial
+			2013010103	; serial
 			1h		; refresh
 			900		; retry
 			1209600		; expire
@@ -157,6 +157,8 @@ negative	CNAME	negative.mypopmadness.com.
 ;		SSHFP	1 2 235c92aa6b7a08a8b6b8d56eb0a5df909c488226dd2baa4d2ab59177b298dfe6
 ;		SSHFP	2 1 1f9f2927b29bad145f6cb024c717e49bca390b13
 ;		SSHFP	2 2 40d5f68f42e609dcc2bb8f029aea2a49bcc8c8b93b905973ea8785a5e9bb7c0d
+
+phoenix		A	192.198.81.183
 
 sigma		A	74.207.250.111
 		SSHFP	1 1 4de6de12e46960207332eae919667a639390a2c9
