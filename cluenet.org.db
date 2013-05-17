@@ -3,7 +3,7 @@ $ORIGIN cluenet.org.
 $TTL 2h
 
 @	SOA	ns1 hostmaster (
-			2013010108	; serial
+			2013010109	; serial
 			1h		; refresh
 			900		; retry
 			1209600		; expire
@@ -29,6 +29,8 @@ $TTL 2h
 *.g	CNAME	ghs.google.com.
 
 dlv	0 TXT	"DLV:1:oravbfsalwvb"
+
+test	CNAME	test
 
 ;; service SRV records and round-robins
 
