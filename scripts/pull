@@ -1,7 +1,3 @@
 #!/bin/sh
 
 cd /cluenet/dns && git pull --ff-only && make
-
-if [ "$SUDO_USER" = "grawlocal" ]; then
-	bash
-fi
