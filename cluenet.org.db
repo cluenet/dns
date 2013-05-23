@@ -3,7 +3,7 @@ $ORIGIN cluenet.org.
 $TTL 2h
 
 @	SOA	ns1 hostmaster (
-			2013010109	; serial
+			2013010366	; serial
 			1h		; refresh
 			900		; retry
 			1209600		; expire
