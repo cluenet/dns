@@ -3,7 +3,7 @@ $ORIGIN cluenet.org.
 $TTL 2h
 
 @	SOA	ns1 hostmaster (
-			2013010366	; serial
+			2013053001	; serial
 			1h		; refresh
 			900		; retry
 			1209600		; expire
@@ -74,9 +74,7 @@ core		TXT	"Core server round-robin"
 
 ldap		CNAME	core
 kerberos	CNAME	core
-krb5-admin	CNAME	kerberos ; kill this
-
-id		CNAME	radian ; what the hell is id
+krb5-admin	CNAME	kerberos
 
 ;; service subdomains
 
@@ -88,15 +86,10 @@ auth		CNAME	equal
 a.core		CNAME	www
 irc4		CNAME	irc
 mail		CNAME	ghs.google.com.
-projects	CNAME	cubed
-remoteincludes	CNAME	oscillator
 rwho		CNAME	virgule
 search		CNAME	equal
-ssl		CNAME	oscillator
 svn		CNAME	radian
 syslog		CNAME	radian
-teamforkbomb	CNAME	oscillator
-voip		A	78.129.140.218 ; wat
 wiki		CNAME	radian
 www		CNAME	radian
 
@@ -121,7 +114,6 @@ equal		AAAA	2a01:7e00::f03c:91ff:fe96:53e1
 		SSHFP	2 2 c185843949355b5a83e550cbd3696f150752d86fe5770695d6f5a627d15309e2
 		SSHFP	3 1 b4afd58a28c2012fff4d8a19936017f1f4d04e27
 		SSHFP	3 2 0e6309745cb3d56300f2d2d289f7095b8c8527316c92d9033a44b6d860743a80
-host.equal	A	109.74.207.16
 
 eta		A	95.31.43.230
 eta		AAAA	2001:67c:2158:a027::2
