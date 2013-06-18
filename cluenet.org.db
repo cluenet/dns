@@ -35,40 +35,40 @@ dlv	0 TXT	"DLV:1:oravbfsalwvb"
 _kerberos		TXT	"CLUENET.ORG"
 
 _irc._tcp		SRV	0	0	6667	virgule
-_irc._tcp		SRV	0	0	6667	radian
+;_irc._tcp		SRV	0	0	6667	radian
 
 _ircs._tcp		SRV	0	0	6697	virgule
-_ircs._tcp		SRV	0	0	6697	radian
+;_ircs._tcp		SRV	0	0	6697	radian
 
 _kerberos._udp		SRV	0	0	88	virgule
-_kerberos._udp		SRV	0	0	88	radian
+;_kerberos._udp		SRV	0	0	88	radian
 
 _kerberos._tcp		SRV	0	0	88	virgule
-_kerberos._tcp		SRV	0	0	88	radian
+;_kerberos._tcp		SRV	0	0	88	radian
 
 _kerberos-adm._tcp	SRV	0	0	749	virgule
-_kerberos-adm._tcp	SRV	0	0	749	radian
+;_kerberos-adm._tcp	SRV	0	0	749	radian
 
 _kpasswd._udp		SRV	0	0	464	virgule
-_kpasswd._udp		SRV	0	0	464	radian
+;_kpasswd._udp		SRV	0	0	464	radian
 
 _ldap._tcp		SRV	0	0	389	virgule
-_ldap._tcp		SRV	0	0	389	radian
+;_ldap._tcp		SRV	0	0	389	radian
 
 _xmpp-client._tcp	SRV	10	0	5222	equal
 
 _xmpp-server._tcp	SRV	10	0	5269	equal
 
 irc		5m TXT	"IRC server round-robin"
-		A	70.85.16.91			; radian
+;		A	70.85.16.91			; radian
 		A	109.74.192.129			; virgule
 		AAAA	2a01:7e00::f03c:91ff:fe96:5efd	; virgule
 		A	176.31.156.245			; decay
 		AAAA	2001:41d0:2:bb58:dead:beef:28c7:49b8	; decay
 
 core		TXT	"Core server round-robin"
-		A	70.85.16.91			; radian
-		AAAA	2001:470:1f0f:112c::1		; radian
+;		A	70.85.16.91			; radian
+;		AAAA	2001:470:1f0f:112c::1		; radian
 		A	109.74.192.129			; virgule
 		AAAA	2a01:7e00::f03c:91ff:fe96:5efd	; virgule
 
