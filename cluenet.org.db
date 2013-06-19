@@ -2,8 +2,8 @@
 $ORIGIN cluenet.org.
 $TTL 2h
 
-@	SOA	ns1 hostmaster (
-			2013061903	; serial
+@	SOA	radian hostmaster (
+			2013061904	; serial
 			1h		; refresh
 			900		; retry
 			1209600		; expire
