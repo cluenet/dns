@@ -3,7 +3,7 @@ $ORIGIN cluenet.org.
 $TTL 2h
 
 @	SOA	ns1 hostmaster (
-			2013061901	; serial
+			2013061902	; serial
 			1h		; refresh
 			900		; retry
 			1209600		; expire
@@ -130,7 +130,6 @@ radian		AAAA	2001:470:1f0f:112c::1
 		SSHFP	2 2 65981d7fd79bd997a3ed3fae1a7176cf281f745216a69f74861d39bc6a7b1e
 @		A	70.85.16.91
 @		AAAA	2001:470:1f0f:112c::1
-ns1		A	70.85.16.91
 
 hawking		A	46.105.138.6
 		SSHFP	1 1 60f25057945d6cab589e552c8b9968900994a00f
