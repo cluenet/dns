@@ -3,7 +3,7 @@ $ORIGIN cluenet.org.
 $TTL 2h
 
 @	SOA	radian hostmaster (
-			2013061904	; serial
+			2013061905	; serial
 			1h		; refresh
 			900		; retry
 			1209600		; expire
@@ -90,6 +90,7 @@ rwho		CNAME	virgule
 search		CNAME	equal
 svn		CNAME	radian
 syslog		CNAME	radian
+kdc.syslog	CNAME	virgule			; receives logs from KDCs
 wiki		CNAME	radian
 www		CNAME	radian
 
