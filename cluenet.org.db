@@ -57,26 +57,26 @@ _xmpp-client._tcp	SRV	10	0	5222	equal
 _xmpp-server._tcp	SRV	10	0	5269	equal
 
 irc		5m TXT	"IRC server round-robin"
-;		A	70.85.16.91			; radian
-		A	109.74.192.129			; virgule
-		AAAA	2a01:7e00::f03c:91ff:fe96:5efd	; virgule
-		A	176.31.156.245			; decay
-		AAAA	2001:41d0:2:bb58:dead:beef:28c7:49b8	; decay
-
-core		TXT	"Core server round-robin"
-		A	70.85.16.91			; radian
-		AAAA	2001:470:1f0f:112c::1		; radian
-		A	109.74.192.129			; virgule
-		AAAA	2a01:7e00::f03c:91ff:fe96:5efd	; virgule
 		A	176.31.156.245				; decay
 		AAAA	2001:41d0:2:bb58:dead:beef:28c7:49b8	; decay
+;		A	70.85.16.91				; radian
+		A	109.74.192.129				; virgule
+		AAAA	2a01:7e00::f03c:91ff:fe96:5efd		; virgule
+
+core		TXT	"core server (LDAP+Kerberos) round-robin"
+		A	176.31.156.245				; decay
+		AAAA	2001:41d0:2:bb58:dead:beef:28c7:49b8	; decay
+		A	70.85.16.91				; radian
+		AAAA	2001:470:1f0f:112c::1			; radian
+		A	109.74.192.129				; virgule
+		AAAA	2a01:7e00::f03c:91ff:fe96:5efd		; virgule
 
 ldap		CNAME	core
 kerberos	CNAME	core
 krb5-admin	CNAME	kerberos
 
-ns1		A	109.74.200.177			; equal
-ns2		A	109.74.192.129			; virgule
+ns1		A	109.74.200.177				; equal
+ns2		A	109.74.192.129				; virgule
 
 ;; service subdomains
 
