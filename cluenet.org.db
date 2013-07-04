@@ -3,7 +3,7 @@ $ORIGIN cluenet.org.
 $TTL 2h
 
 @	SOA	radian hostmaster (
-			2013061905	; serial
+			2013061906	; serial
 			1h		; refresh
 			900		; retry
 			1209600		; expire
@@ -68,6 +68,8 @@ core		TXT	"Core server round-robin"
 		AAAA	2001:470:1f0f:112c::1		; radian
 		A	109.74.192.129			; virgule
 		AAAA	2a01:7e00::f03c:91ff:fe96:5efd	; virgule
+		A	176.31.156.245				; decay
+		AAAA	2001:41d0:2:bb58:dead:beef:28c7:49b8	; decay
 
 ldap		CNAME	core
 kerberos	CNAME	core
