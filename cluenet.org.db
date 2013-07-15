@@ -189,10 +189,6 @@ sine		AAAA	2600:3c03::f03c:91ff:fe70:4796
 		SSHFP	2 1 c2625f73422da220b519657ed9dc773328e4db58
 
 abacus			A	50.76.35.186
-abacus			AAAA	2001:470:8188:bbbb:250:43ff:fe01:dd3f
-; DOWN: does not accept ssh
-bridge.abacus		AAAA	2001:470:8188:0:21a:70ff:fee1:c9d3
-dalektric.abacus	AAAA	2001:470:8188:0:20f:37ff:fe42:92f4
 
 abscissa	A	24.40.136.140
 abscissa	AAAA	2002:1828:88fb:0:dcad:beff:feef:202
