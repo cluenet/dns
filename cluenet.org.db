@@ -3,7 +3,7 @@ $ORIGIN cluenet.org.
 $TTL 2h
 
 @	SOA	radian hostmaster (
-			2013061907	; serial
+			2013061908	; serial
 			1h		; refresh
 			900		; retry
 			1209600		; expire
@@ -51,10 +51,6 @@ _kpasswd._udp		SRV	0	0	464	radian
 
 _ldap._tcp		SRV	0	0	389	virgule
 _ldap._tcp		SRV	0	0	389	radian
-
-_xmpp-client._tcp	SRV	10	0	5222	equal
-
-_xmpp-server._tcp	SRV	10	0	5269	equal
 
 irc		5m TXT	"IRC server round-robin"
 		A	176.31.156.245				; decay
@@ -116,9 +112,6 @@ aleph		A	46.65.55.28
 		SSHFP	3 1 76471cb83e1c9281501016edcbe2a130d0bc8068
 		SSHFP	3 2 830f5f520b47d144003c84412c415f0cfc26609d466104ceecaddf9e15e93521
 
-digit		A	80.45.149.194
-digit		AAAA	2001:470:1f08:17e::2
-
 equal		A	109.74.200.177
 equal		AAAA	2a01:7e00::f03c:91ff:fe96:53e1
 		SSHFP	1 1 94f462031c17fd95c6613b6fa5c4f9c73156dcce
@@ -159,10 +152,6 @@ hex		A	109.74.199.212
 iodine		A	82.196.2.150
 
 negative	A	64.184.114.37
-;		SSHFP	1 1 395f512a586d0b712d934a54c67cd5d77d07b8e2
-;		SSHFP	1 2 235c92aa6b7a08a8b6b8d56eb0a5df909c488226dd2baa4d2ab59177b298dfe6
-;		SSHFP	2 1 1f9f2927b29bad145f6cb024c717e49bca390b13
-;		SSHFP	2 2 40d5f68f42e609dcc2bb8f029aea2a49bcc8c8b93b905973ea8785a5e9bb7c0d
 
 phoenix		A	192.198.81.183
 		SSHFP	1 1 a1990df7d6644bb6df746a9b0b156f0128faec31
@@ -188,86 +177,7 @@ sine		AAAA	2600:3c03::f03c:91ff:fe70:4796
 		SSHFP	1 1 5a3c480fe6475734c64c22f0fed7677a803219fb
 		SSHFP	2 1 c2625f73422da220b519657ed9dc773328e4db58
 
-abacus			A	50.76.35.186
-
-abscissa	A	24.40.136.140
-abscissa	AAAA	2002:1828:88fb:0:dcad:beff:feef:202
-; DOWN: host unreachable (Cobinet down)
-
-absval		A	69.61.141.122
-; DOWN: no ping, no ssh
-
-alpha		CNAME	fox.snofox.net.
-; DOWN: no such domain
-
-astroid		A	83.67.107.164
-; DOWN: routing loop
-
-asymptote	CNAME	hcms.dnsalias.org.
-; DOWN: does not accept ssh
-
-cosine		A	69.61.141.122
-; DOWN: no ping, no ssh
-
-euclid		A	24.40.136.140
-euclid		AAAA	2002:1828:88fb:0:240:5ff:fe10:46b8
-; DOWN: host unreachable (Cobinet down)
-
-gamma		CNAME	gamma.thehawken.org.
-; DOWN: no such domain
-
-induction	A	70.87.222.121
-induction	AAAA	2002:4657:de79::1
-; DOWN: no ping, no ssh
-
-integral	A	64.85.164.142
-; DOWN: refuses ssh
-
-junction	A	69.64.10.59
-; DOWN: host unreachable
-
-lambda		A	69.54.4.175
-; DOWN: routing loop
-
-lindelof	A	24.40.136.140
-lindelof	AAAA	2002:1828:88fb:0:dcad:beff:feef:205
-; DOWN: host unreachable (Cobinet down)
-
-octagon		A	98.222.53.62
-; DOWN: no ping, no ssh
-
-ordinate	A	24.40.136.140
-ordinate	AAAA	2002:1828:88fb:0:dcad:beff:feef:204
-; DOWN: host unreachable (Cobinet down)
-
-oscillator	CNAME	oscillator.cs.uiuc.edu.
-; DOWN: no ping, no ssh
-
-phi		A	24.40.136.140
-phi		AAAA	2002:1828:88fb:0:204:5aff:fe66:aac2
-; DOWN: host unreachable (Cobinet down)
-
-pi		A	24.40.136.140
-pi		AAAA	2002:1828:88fb:0:250:8bff:fe91:576
-; DOWN: host unreachable (Cobinet down)
-
-radon		A	81.89.97.56
-; DOWN: no ping, no ssh
-
-rectangle	A	24.40.136.140
-rectangle	AAAA	2002:1828:88fb:0:20b:cdff:fe9c:b85d
-; DOWN: host unreachable (Cobinet down)
-
-square		A	24.40.136.140
-square		AAAA	2002:1828:88fb:0:20e:7fff:fef0:3b93
-; DOWN: host unreachable (Cobinet down)
-
-terabit		A	117.103.173.155
-; DOWN: no ping, no ssh
-
-theta		A	24.40.136.140
-theta		AAAA	2002:1828:88fb:0:dcad:beff:feef:206
-; DOWN: host unreachable (Cobinet down)
+abacus		A	50.76.35.186
 
 ;; Cobi has his own section
 
