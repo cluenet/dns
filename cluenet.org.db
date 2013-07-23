@@ -3,7 +3,7 @@ $ORIGIN cluenet.org.
 $TTL 2h
 
 @	SOA	radian hostmaster (
-			2013061908	; serial
+			2013061909	; serial
 			1h		; refresh
 			900		; retry
 			1209600		; expire
@@ -60,8 +60,6 @@ irc		5m TXT	"IRC server round-robin"
 		AAAA	2a01:7e00::f03c:91ff:fe96:5efd		; virgule
 
 core		TXT	"core server (LDAP+Kerberos) round-robin"
-		A	176.31.156.245				; decay
-		AAAA	2001:41d0:2:bb58:dead:beef:28c7:49b8	; decay
 		A	70.85.16.91				; radian
 		AAAA	2001:470:1f0f:112c::1			; radian
 		A	109.74.192.129				; virgule
@@ -69,8 +67,7 @@ core		TXT	"core server (LDAP+Kerberos) round-robin"
 
 kadmin.core	TXT	"kadmind round-robin"
 		; Not all servers are in the kadmin rr.
-		; 1) MIT kadmind can only serve one realm per instance,
-		;    and decay runs kadmind for my own realm;
+		; 1) MIT kadmind can only serve one realm per instance.
 		; 2) It is a pain to replicate kadm5.acl over many servers.
 		A	70.85.16.91				; radian
 		AAAA	2001:470:1f0f:112c::1			; radian
