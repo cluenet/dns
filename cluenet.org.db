@@ -3,7 +3,7 @@ $ORIGIN cluenet.org.
 $TTL 2h
 
 @	SOA	radian hostmaster (
-			2013061910	; serial
+			2013061911	; serial
 			1h		; refresh
 			900		; retry
 			1209600		; expire
@@ -53,7 +53,7 @@ _ldap._tcp		SRV	0	0	389	virgule
 _ldap._tcp		SRV	0	0	389	radian
 
 irc		5m TXT	"IRC server round-robin"
-;		A	70.85.16.91				; radian
+		A	70.85.16.91				; radian
 		A	109.74.192.129				; virgule
 		AAAA	2a01:7e00::f03c:91ff:fe96:5efd		; virgule
 
