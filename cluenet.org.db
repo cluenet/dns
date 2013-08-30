@@ -5,14 +5,16 @@ $TTL 2h
 ; TODO: equal is dead, remove it from everywhere.
 
 @	SOA	radian hostmaster (
-			2013061912	; serial
+			2013061913	; serial
 			1h		; refresh
 			900		; retry
 			1209600		; expire
 			300		; minttl
 		)
 
-	NS	ns1 ; equal
+	; NOTE: glue still has ns1→Equal, because cobi
+
+	;NS	ns1 ; equal
 	NS	ns2 ; virgule
 
 	MX	10 ASPMX.L.GOOGLE.COM.
