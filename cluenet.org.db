@@ -2,8 +2,10 @@
 $ORIGIN cluenet.org.
 $TTL 2h
 
+; TODO: equal is dead, remove it from everywhere.
+
 @	SOA	radian hostmaster (
-			2013061911	; serial
+			2013061912	; serial
 			1h		; refresh
 			900		; retry
 			1209600		; expire
@@ -76,7 +78,7 @@ ldap		CNAME	core
 kerberos	CNAME	core
 krb5-admin	CNAME	kadmin.core
 
-ns1		A	109.74.200.177				; equal
+;ns1		A	109.74.200.177				; equal
 ns2		A	109.74.192.129				; virgule
 
 ;; service subdomains
@@ -85,12 +87,12 @@ cluebot		CNAME	virgule
 report.cluebot	CNAME	bots.wmflabs.org.
 review.cluebot	CNAME	ghs.google.com.
 
-auth		CNAME	equal
+;auth		CNAME	equal
 a.core		CNAME	www
 irc4		CNAME	irc
 mail		CNAME	ghs.google.com.
 rwho		CNAME	virgule
-search		CNAME	equal
+;search		CNAME	equal
 svn		CNAME	radian
 syslog		CNAME	radian
 kdc.syslog	CNAME	virgule			; receives logs from KDCs
@@ -106,15 +108,6 @@ aleph		A	46.65.55.28
 		SSHFP	2 2 698bc044916f8999b44fc13b8403308a82c01daf91b668dd698b19bac7f57d8b
 		SSHFP	3 1 76471cb83e1c9281501016edcbe2a130d0bc8068
 		SSHFP	3 2 830f5f520b47d144003c84412c415f0cfc26609d466104ceecaddf9e15e93521
-
-equal		A	109.74.200.177
-equal		AAAA	2a01:7e00::f03c:91ff:fe96:53e1
-		SSHFP	1 1 94f462031c17fd95c6613b6fa5c4f9c73156dcce
-		SSHFP	1 2 6bbd71cefe8392f3f5d1a636545e9d601cacc3bcf534b8b5e18fce85523cd430
-		SSHFP	2 1 03d81eb81d0fd2d188019cb59c8542b892688189
-		SSHFP	2 2 c185843949355b5a83e550cbd3696f150752d86fe5770695d6f5a627d15309e2
-		SSHFP	3 1 b4afd58a28c2012fff4d8a19936017f1f4d04e27
-		SSHFP	3 2 0e6309745cb3d56300f2d2d289f7095b8c8527316c92d9033a44b6d860743a80
 
 eta		A	95.31.43.230
 eta		AAAA	2001:67c:2158:a027::2
