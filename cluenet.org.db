@@ -5,7 +5,7 @@ $TTL 2h
 ; TODO: equal is dead, remove it from everywhere.
 
 @	SOA	radian hostmaster (
-			2013061913	; serial
+			2013061915	; serial
 			1h		; refresh
 			900		; retry
 			1209600		; expire
@@ -127,7 +127,7 @@ radian		AAAA	2001:470:1f0f:112c::1
 @		A	70.85.16.91
 @		AAAA	2001:470:1f0f:112c::1
 
-hawking		A	46.105.138.6
+hawking		A	198.211.112.112
 		SSHFP	1 1 60f25057945d6cab589e552c8b9968900994a00f
 		SSHFP	1 2 22fd110f6bbd5ad64d8be37eab2b97c72907516dfbc639d7ccd1cf4e8816b51a
 		SSHFP	2 1 c6103710c3ff22114a593b1252df6536f998673e
