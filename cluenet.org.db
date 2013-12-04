@@ -5,7 +5,7 @@ $TTL 2h
 ; TODO: equal is dead, remove it from everywhere.
 
 @	SOA	radian hostmaster (
-			2013061915	; serial
+			2013061916	; serial
 			1h		; refresh
 			900		; retry
 			1209600		; expire
@@ -117,6 +117,8 @@ eta		AAAA	2001:67c:2158:a027::2
 		SSHFP	1 2 c0300ab1b7281d8232361dfe0eed6f37b10b267a24c3b4953664f3a2b8494908
 		SSHFP	2 1 c767d6d88002d99c88d545600be26e63c3c23f6e
 		SSHFP	2 2 f7f1bc08f51cb4ed1e14ee1624590658a1f4afd9ff538291aa75d16efd543637
+
+gamma		CNAME	gamma.thehawken.org.
 
 hawking		A	198.211.112.112
 		SSHFP	1 1 60f25057945d6cab589e552c8b9968900994a00f
