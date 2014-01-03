@@ -11,5 +11,5 @@ notifications:
   webhooks:
     urls:
       - "http://www.cluenet.org/etc/update-dns.php"
-    on_success: always
-    on_failure: never
+    on_success: change
+    on_failure: always
