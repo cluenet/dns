@@ -5,7 +5,7 @@ $TTL 2h
 ; TODO: equal is dead, remove it from everywhere.
 
 @	SOA	radian hostmaster (
-			2013061918	; serial
+			2013061919	; serial
 			1h		; refresh
 			900		; retry
 			1209600		; expire
@@ -85,22 +85,8 @@ ns2		A	109.74.192.129				; virgule
 
 dyn		NS	radian
 		NS	virgule
-		DS	257 3 5 (
-				AwEAAbplneo1zTqvq3UhbxZiGGMc7CfCygoQyJFQuFrXbj/0nzJVMNq7
-				fS/MObKl8Qum2I+8KdQkqIEs4Ok1TiSOaFxL4CUgIxCSQ9PCms1jgl7Q
-				TJjnBjseEgbaTlPV7fJFmPmQxt0h0HfilwwxK6ga5wTyBWYJI29dqhv9
-				D9MJHlU0J9T6al9Vw9TAf05LchND+AGgNupp/VhkAvlio7RXUdLBD9hX
-				NnxabpOYrwUwFERdeki7ME1BoKZsO/UjkRPz6i7VnrHKOMJc7MErNPRE
-				Lz3BDz1X4NzbD1jQNflZ+zjjJlLJ8Ej3jEVVf9X/l2bnmKhOqIppztil
-				zBM6sc+hyPU=
-			)
-		DS	256 3 5 (
-				AwEAAdimykfkKKfQXk7nd0p94Fo+jHJ+sCMjZa69Bu/qZekmBdHU4H3n
-				z7hFUSQnhX6j/pIx03TqNNPr/Hks8M148P9cvZxeiytjqeeH292SfkeT
-				pz9UZuY/af8qe5SIpgu1lLR0HNv7N+EZ64FfvUwvQp4C252nZRzt5eSX
-				EJZcv60l
-			)
-
+		DS	28771 5 1 40D4C91FD09B984F3DD1083769CCB7FAFC45FA5C
+		DS	28771 5 2 BEF15A02C6C4C0DDE8D7BA1947EF07ADF41E27CB16067CAA39732ADA AF4B7643
 
 ;; service subdomains
 
