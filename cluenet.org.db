@@ -5,7 +5,7 @@ $TTL 2h
 ; TODO: equal is dead, remove it from everywhere.
 
 @	SOA	radian hostmaster (
-			2013061919	; serial
+			2013061920	; serial
 			1h		; refresh
 			900		; retry
 			1209600		; expire
@@ -116,12 +116,7 @@ aleph		A	46.65.55.28
 		SSHFP	3 1 76471cb83e1c9281501016edcbe2a130d0bc8068
 		SSHFP	3 2 830f5f520b47d144003c84412c415f0cfc26609d466104ceecaddf9e15e93521
 
-eta		A	95.31.43.230
-eta		AAAA	2001:67c:2158:a027::2
-		SSHFP	1 1 4b707138ec1e0387d5d5103d59a1f97905bbae8e
-		SSHFP	1 2 c0300ab1b7281d8232361dfe0eed6f37b10b267a24c3b4953664f3a2b8494908
-		SSHFP	2 1 c767d6d88002d99c88d545600be26e63c3c23f6e
-		SSHFP	2 2 f7f1bc08f51cb4ed1e14ee1624590658a1f4afd9ff538291aa75d16efd543637
+eta		CNAME	eta.dyn.cluenet.org.
 
 gamma		CNAME	gamma.thehawken.org.
 
