@@ -27,8 +27,8 @@ git clone -q -s "$repodir" "$workdir"
 git rev-list "$range" | while read commit; do
 	(cd "$workdir" && git checkout -q -f "$commit")
 	if ! output=$(cd "$workdir" && scripts/check 2>&1); then
-		author=$(git show -q --format='%aE' "$commit")
-		committer=$(git show -q --format='%cE' "$commit")
+		author=$(git show -s --format='%aE' "$commit")
+		committer=$(git show -s --format='%cE' "$commit")
 		echo "$author broke it in ${commit:0:20}"
 		echo "$output"
 		if ! (( nastygram )); then
@@ -53,7 +53,7 @@ git rev-list "$range" | while read commit; do
 			echo ""
 			echo "Your commit ${commit:0:20} to cluenet/dns has errors."
 			echo ""
-			echo "$output" | sed 's/^/| /'
+			echo "$output"
 			echo ""
 			echo "-- "
 			echo "scripts/blame"
