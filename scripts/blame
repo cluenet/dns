@@ -1,0 +1,68 @@
+#!/usr/bin/env bash
+
+set -e
+
+repodir=$(git rev-parse --show-toplevel)
+fqdn=$(hostname -f)
+status=0
+
+nastygram=0
+if [[ "$1" == -m ]]; then
+	nastygram=1; shift
+fi
+old=${1:-'HEAD@{1}'}
+
+if (cd "$repodir" && scripts/check) > /dev/null 2>&1; then
+	echo "HEAD is fine, exiting"
+	exit 0
+fi
+
+old=$(git rev-parse --verify "$old") || exit
+new=$(git rev-parse --verify "HEAD") || exit
+range=$old..$new
+
+workdir=$(mktemp -d /tmp/blame.XXXXXXXX)
+git clone -q -s "$repodir" "$workdir"
+
+git rev-list "$range" | while read commit; do
+	(cd "$workdir" && git checkout -q -f "$commit")
+	if ! output=$(cd "$workdir" && scripts/check 2>&1); then
+		author=$(git show -q --format='%aE' "$commit")
+		committer=$(git show -q --format='%cE' "$commit")
+		echo "$author broke it in ${commit:0:20}"
+		echo "$output"
+		if ! (( nastygram )); then
+			break
+		fi
+		hrcpt="<$author>"
+		ercpt=("$author")
+		if [[ "$author" != "$committer" ]]; then
+			hrcpt+=", <$committer>"
+			ercpt+=("$committer")
+		fi
+		{
+			echo "From: <daemon@$fqdn>"
+			echo "To: <$author>"
+			if [[ "$author" != "$committer" ]]; then
+				echo "Cc: $committer"
+			fi
+			echo "Date: $(date "+%a, %d %b %Y %H:%M:%S %z")"
+			echo "Subject: You broke DNS."
+			echo "Reply-To: grawity@gmail.com"
+			echo "Content-Type: text/plain; charset=utf-8"
+			echo ""
+			echo "Your commit ${commit:0:20} to cluenet/dns has errors."
+			echo ""
+			echo "$output" | sed 's/^/| /'
+			echo ""
+			echo "-- "
+			echo "scripts/blame"
+		} | /usr/sbin/sendmail -i -t
+		status=1
+		break
+	fi
+done
+
+rm -rf "$workdir"
+
+exit $status
