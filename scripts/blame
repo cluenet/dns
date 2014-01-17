@@ -24,7 +24,8 @@ range=$old..$new
 workdir=$(mktemp -d /tmp/blame.XXXXXXXX)
 git clone -q -s "$repodir" "$workdir"
 
-git rev-list "$range" | while read commit; do
+while read commit; do
+	echo "checking $commit"
 	(cd "$workdir" && git checkout -q -f "$commit")
 	if ! output=$(cd "$workdir" && scripts/check 2>&1); then
 		author=$(git show -s --format='%aE' "$commit")
@@ -61,7 +62,7 @@ git rev-list "$range" | while read commit; do
 		status=1
 		break
 	fi
-done
+done < <(git rev-list "$range")
 
 rm -rf "$workdir"
 
