@@ -10,37 +10,45 @@ nastygram=0
 if [[ "$1" == -m ]]; then
 	nastygram=1; shift
 fi
+
 old=${1:-'HEAD@{1}'}
-
-if (cd "$repodir" && scripts/check) > /dev/null 2>&1; then
-	echo "HEAD is fine, exiting"
-	exit 0
-fi
-
 old=$(git rev-parse --verify "$old") || exit
 new=$(git rev-parse --verify "HEAD") || exit
 range=$old..$new
 
+head=$new
+unset bad
+
+if headoutput=$(cd "$repodir" && scripts/check 2>&1); then
+	echo "HEAD is fine, exiting"
+	exit 0
+fi
+
 workdir=$(mktemp -d /tmp/blame.XXXXXXXX)
 git clone -q -s "$repodir" "$workdir"
-
 while read commit; do
-	echo "checking $commit"
+	echo "checking $commit" # from HEAD backwards
 	(cd "$workdir" && git checkout -q -f "$commit")
-	if ! output=$(cd "$workdir" && scripts/check 2>&1); then
-		author=$(git show -s --format='%aE' "$commit")
-		committer=$(git show -s --format='%cE' "$commit")
-		echo "$author broke it in ${commit:0:20}"
-		echo "$output"
-		if ! (( nastygram )); then
-			break
-		fi
-		hrcpt="<$author>"
-		ercpt=("$author")
-		if [[ "$author" != "$committer" ]]; then
-			hrcpt+=", <$committer>"
-			ercpt+=("$committer")
-		fi
+	if output=$(cd "$workdir" && scripts/check 2>&1); then
+		break
+	else
+		bad=$commit
+		badoutput=$output
+	fi
+done < <(git rev-list "$range")
+rm -rf "$workdir"
+
+if [[ "$bad" ]]; then
+	author=$(git show -s --format='%aE' "$bad")
+	committer=$(git show -s --format='%cE' "$bad")
+
+	echo "<$author> broke it in ${bad:0:20}"
+	echo "# first bad commit"
+	echo "$badoutput"
+	echo "# latest commit"
+	echo "$headoutput"
+
+	if (( nastygram )); then
 		{
 			echo "From: <daemon@$fqdn>"
 			echo "To: <$author>"
@@ -52,18 +60,19 @@ while read commit; do
 			echo "Reply-To: grawity@gmail.com"
 			echo "Content-Type: text/plain; charset=utf-8"
 			echo ""
-			echo "Your commit ${commit:0:20} to cluenet/dns has errors."
+			echo "Your commits to cluenet/dns have syntax errors."
 			echo ""
-			echo "$output"
+			echo "# latest commit ${head:0:20}"
+			echo "$headoutput"
+			echo ""
+			echo "# first bad commit ${bad:0:20}"
+			echo "$badoutput"
 			echo ""
 			echo "-- "
 			echo "scripts/blame"
 		} | /usr/sbin/sendmail -i -t
-		status=1
-		break
+		echo "email to <$author> sent"
 	fi
-done < <(git rev-list "$range")
 
-rm -rf "$workdir"
-
-exit $status
+	exit 1
+fi
