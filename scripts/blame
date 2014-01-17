@@ -4,24 +4,16 @@ set -e
 
 repodir=$(git rev-parse --show-toplevel)
 fqdn=$(hostname -f)
-status=0
+unset bad
 
 nastygram=0
 if [[ "$1" == -m ]]; then
 	nastygram=1; shift
 fi
 
-old=${1:-'HEAD@{1}'}
-old=$(git rev-parse --verify "$old") || exit
-new=$(git rev-parse --verify "HEAD") || exit
-range=$old..$new
-
-head=$new
-unset bad
-
+head=$(git rev-parse HEAD) || exit
 if headoutput=$(cd "$repodir" && scripts/check 2>&1); then
-	echo "HEAD is fine, exiting"
-	exit 0
+	echo "HEAD is fine, exiting"; exit
 fi
 
 workdir=$(mktemp -d /tmp/blame.XXXXXXXX)
@@ -35,14 +27,15 @@ while read commit; do
 		bad=$commit
 		badoutput=$output
 	fi
-done < <(git rev-list "$range")
+done < <(git rev-list -n 30 "$head")
 rm -rf "$workdir"
 
 if [[ "$bad" ]]; then
-	author=$(git show -s --format='%aE' "$bad")
-	committer=$(git show -s --format='%cE' "$bad")
+	headcommitter=$(git show -s --format='%cE' "$head")
+	badauthor=$(git show -s --format='%aE' "$bad")
+	badcommitter=$(git show -s --format='%cE' "$bad")
 
-	echo "<$author> broke it in ${bad:0:20}"
+	echo "<$badauthor> broke it in ${bad:0:20}"
 	echo "# first bad commit"
 	echo "$badoutput"
 	echo "# latest commit"
@@ -51,16 +44,19 @@ if [[ "$bad" ]]; then
 	if (( nastygram )); then
 		{
 			echo "From: <daemon@$fqdn>"
-			echo "To: <$author>"
-			if [[ "$author" != "$committer" ]]; then
-				echo "Cc: $committer"
+			echo "To: <$badauthor>"
+			if [[ "$badauthor" != "$badcommitter" ]]; then
+				echo "Cc: $badcommitter"
+			fi
+			if [[ "$badcommitter" != "$headcommitter" ]]; then
+				echo "Cc: $headcommitter"
 			fi
 			echo "Date: $(date "+%a, %d %b %Y %H:%M:%S %z")"
-			echo "Subject: You broke DNS."
+			echo "Subject: [cluenet] DNS zonefile is broken"
 			echo "Reply-To: grawity@gmail.com"
 			echo "Content-Type: text/plain; charset=utf-8"
 			echo ""
-			echo "Your commits to cluenet/dns have syntax errors."
+			echo "Commits to cluenet/dns have syntax errors."
 			echo ""
 			echo "# latest commit ${head:0:20}"
 			echo "$headoutput"
@@ -71,7 +67,7 @@ if [[ "$bad" ]]; then
 			echo "-- "
 			echo "scripts/blame"
 		} | /usr/sbin/sendmail -i -t
-		echo "email to <$author> sent"
+		echo "email to <$badauthor> sent"
 	fi
 
 	exit 1
