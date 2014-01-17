@@ -1,3 +1,5 @@
 #!/bin/sh
 
-cd /cluenet/dns && git pull --ff-only && make
+cd /cluenet/dns && {
+	OLD=$(git rev-parse HEAD) && git pull --ff-only && make OLD="$OLD" pulled
+}
