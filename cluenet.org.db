@@ -16,6 +16,7 @@ $TTL 2h
 
 	;NS	ns1 ; equal
 	NS	ns2 ; virgule
+	FOO
 
 	MX	10 ASPMX.L.GOOGLE.COM.
 	MX	20 ALT1.ASPMX.L.GOOGLE.COM.
