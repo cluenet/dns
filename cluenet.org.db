@@ -5,7 +5,7 @@ $TTL 2h
 ; TODO: equal is dead, remove it from everywhere.
 
 @	SOA	radian hostmaster (
-			2013061922	; serial
+			2013063000	; serial
 			1h		; refresh
 			900		; retry
 			1209600		; expire
