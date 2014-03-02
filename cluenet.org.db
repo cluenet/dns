@@ -5,7 +5,7 @@ $TTL 2h
 ; TODO: equal is dead, remove it from everywhere.
 
 @	SOA	radian hostmaster (
-			2013063000	; serial
+			2013063001	; serial
 			1h		; refresh
 			900		; retry
 			1209600		; expire
@@ -57,6 +57,8 @@ _ldap._tcp		SRV	0	0	389	virgule
 _ldap._tcp		SRV	0	0	389	radian
 
 irc		5m TXT	"IRC server round-robin"
+		A	62.113.218.19				; sky
+		AAAA	2a00:f48:1029::1:9b06:6ac3		; sky
 		;A	70.85.16.91				; radian
 		;AAAA	2001:470:1f0f:112c::1			; radian
 		A	109.74.192.129				; virgule
