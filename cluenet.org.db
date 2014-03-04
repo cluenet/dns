@@ -5,7 +5,7 @@ $TTL 2h
 ; TODO: equal is dead, remove it from everywhere.
 
 @	SOA	radian hostmaster (
-			2013063002	; serial
+			2013063003	; serial
 			1h		; refresh
 			900		; retry
 			1209600		; expire
@@ -36,25 +36,18 @@ dlv	0 TXT	"DLV:1:oravbfsalwvb"
 _kerberos		TXT	"CLUENET.ORG"
 
 _irc._tcp		SRV	0	0	6667	virgule
-_irc._tcp		SRV	0	0	6667	radian
 
 _ircs._tcp		SRV	0	0	6697	virgule
-_ircs._tcp		SRV	0	0	6697	radian
 
 _kerberos._udp		SRV	0	0	88	virgule
-_kerberos._udp		SRV	0	0	88	radian
 
 _kerberos._tcp		SRV	0	0	88	virgule
-_kerberos._tcp		SRV	0	0	88	radian
 
 _kerberos-adm._tcp	SRV	0	0	749	virgule
-_kerberos-adm._tcp	SRV	0	0	749	radian
 
 _kpasswd._udp		SRV	0	0	464	virgule
-_kpasswd._udp		SRV	0	0	464	radian
 
 _ldap._tcp		SRV	0	0	389	virgule
-_ldap._tcp		SRV	0	0	389	radian
 
 irc		5m TXT	"IRC server round-robin"
 		A	62.113.218.19				; sky
@@ -65,8 +58,8 @@ irc		5m TXT	"IRC server round-robin"
 		AAAA	2a01:7e00::f03c:91ff:fe96:5efd		; virgule
 
 core		TXT	"core server (LDAP+Kerberos) round-robin"
-		A	70.85.16.91				; radian
-		AAAA	2001:470:1f0f:112c::1			; radian
+		;A	70.85.16.91				; radian
+		;AAAA	2001:470:1f0f:112c::1			; radian
 		A	109.74.192.129				; virgule
 		AAAA	2a01:7e00::f03c:91ff:fe96:5efd		; virgule
 
@@ -74,8 +67,8 @@ kadmin.core	TXT	"kadmind round-robin"
 		; Not all servers are in the kadmin rr.
 		; 1) MIT kadmind can only serve one realm per instance.
 		; 2) It is a pain to replicate kadm5.acl over many servers.
-		A	70.85.16.91				; radian
-		AAAA	2001:470:1f0f:112c::1			; radian
+		;A	70.85.16.91				; radian
+		;AAAA	2001:470:1f0f:112c::1			; radian
 		A	109.74.192.129				; virgule
 		AAAA	2a01:7e00::f03c:91ff:fe96:5efd		; virgule
 
@@ -86,8 +79,7 @@ krb5-admin	CNAME	kadmin.core
 ;ns1		A	109.74.200.177				; equal
 ns2		A	109.74.192.129				; virgule
 
-dyn		NS	radian
-		NS	virgule
+dyn		NS	virgule
 		DS	28771 5 1 40D4C91FD09B984F3DD1083769CCB7FAFC45FA5C
 		DS	28771 5 2 BEF15A02C6C4C0DDE8D7BA1947EF07ADF41E27CB16067CAA39732ADA AF4B7643
 
