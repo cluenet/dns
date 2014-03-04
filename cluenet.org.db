@@ -36,8 +36,10 @@ dlv	0 TXT	"DLV:1:oravbfsalwvb"
 _kerberos		TXT	"CLUENET.ORG"
 
 _irc._tcp		SRV	0	0	6667	virgule
+_irc._tcp		SRV	0	0	6667	sky.nullroute.eu.org.
 
 _ircs._tcp		SRV	0	0	6697	virgule
+_ircs._tcp		SRV	0	0	6697	sky.nullroute.eu.org.
 
 _kerberos._udp		SRV	0	0	88	virgule
 
