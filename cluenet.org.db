@@ -5,7 +5,7 @@ $TTL 2h
 ; TODO: equal is dead, remove it from everywhere.
 
 @	SOA	radian hostmaster (
-			2013063003	; serial
+			2013063005	; serial
 			1h		; refresh
 			900		; retry
 			1209600		; expire
@@ -171,6 +171,15 @@ sine		AAAA	2600:3c03::f03c:91ff:fe70:4796
 		SSHFP	2 1 c2625f73422da220b519657ed9dc773328e4db58
 
 abacus		A	50.76.35.186
+
+;; user SIG(0) keys and other stuff
+
+grawity		KEY	0 3 5 (
+				AwEAAa9KmIzgc2g9SyLAm0SpJKR/grVohOsOL+Vy0SBS7HXFiwb7U+K9
+				g4EMaTJo34ERw1zBp57kC9DcVTo+fqi4POyOcXJ+DYfhy2RnkvNznUOs
+				vOswE9WpzlZchV2vWlTBUwsL/K4Fp7e7YkFjK46RtxMe+xxQHm5Aps+j
+				RWIIqt3/
+			)
 
 ;; Cobi has his own section
 
