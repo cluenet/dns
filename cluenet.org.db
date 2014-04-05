@@ -5,7 +5,7 @@ $TTL 2h
 ; TODO: equal is dead, remove it from everywhere.
 
 @	SOA	radian hostmaster (
-			2013063005	; serial
+			2013063006	; serial
 			1h		; refresh
 			900		; retry
 			1209600		; expire
@@ -105,7 +105,7 @@ www		CNAME	virgule
 
 ;; servers
 
-aleph		A	46.65.55.28
+aleph		A	87.81.201.208
 		SSHFP	1 1 c8ef9609892203bcf73bae2619adfa1c31a88c11
 		SSHFP	1 2 d4dcfc0e17425945d89929dd7c948a5e399f08fadc6f66056e87046ee1bee4fd
 		SSHFP	2 1 a2898899e26281b585c37049704e3fa94aeb63cb
