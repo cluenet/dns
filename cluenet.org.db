@@ -4,8 +4,8 @@ $TTL 2h
 
 ; TODO: equal is dead, remove it from everywhere.
 
-@	SOA	radian hostmaster (
-			2013063006	; serial
+@	SOA	virgule hostmaster (
+			2013063007	; serial
 			1h		; refresh
 			900		; retry
 			1209600		; expire
