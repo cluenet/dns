@@ -159,11 +159,6 @@ virgule		AAAA	2a01:7e00::f03c:91ff:fe96:5efd
 		SSHFP	3 1 19253400697fa29c8d47420f7c93c50adb1319c0
 		SSHFP	3 2 1e5c24e5d205866b2ecbbcfe77aa18ec0fb2341582d2685f14aa88546ae56ae1
 
-sine		A	50.116.58.214
-sine		AAAA	2600:3c03::f03c:91ff:fe70:4796
-		SSHFP	1 1 5a3c480fe6475734c64c22f0fed7677a803219fb
-		SSHFP	2 1 c2625f73422da220b519657ed9dc773328e4db58
-
 ;; user SIG(0) keys and other stuff
 
 grawity		KEY	0 3 5 (
