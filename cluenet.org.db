@@ -60,14 +60,10 @@ _ldaps._tcp		SRV	0	0	636	virgule
 irc		5m TXT	"IRC server round-robin"
 		A	62.113.218.19				; sky
 		AAAA	2a00:f48:1029::1:9b06:6ac3		; sky
-		;A	70.85.16.91				; radian
-		;AAAA	2001:470:1f0f:112c::1			; radian
 		A	109.74.192.129				; virgule
 		AAAA	2a01:7e00::f03c:91ff:fe96:5efd		; virgule
 
 core		TXT	"core server (LDAP+Kerberos) round-robin"
-		;A	70.85.16.91				; radian
-		;AAAA	2001:470:1f0f:112c::1			; radian
 		A	109.74.192.129				; virgule
 		AAAA	2a01:7e00::f03c:91ff:fe96:5efd		; virgule
 
@@ -75,8 +71,6 @@ kadmin.core	TXT	"kadmind round-robin"
 		; Not all servers are in the kadmin rr.
 		; 1) MIT kadmind can only serve one realm per instance.
 		; 2) It is a pain to replicate kadm5.acl over many servers.
-		;A	70.85.16.91				; radian
-		;AAAA	2001:470:1f0f:112c::1			; radian
 		A	109.74.192.129				; virgule
 		AAAA	2a01:7e00::f03c:91ff:fe96:5efd		; virgule
 
@@ -103,10 +97,7 @@ irc4		CNAME	irc
 mail		CNAME	ghs.google.com.
 rwho		CNAME	virgule
 ;search		CNAME	equal
-svn		CNAME	radian
-syslog		CNAME	radian
 kdc.syslog	CNAME	virgule			; receives logs from KDCs
-wiki		CNAME	radian
 www		CNAME	virgule
 
 ;; servers
