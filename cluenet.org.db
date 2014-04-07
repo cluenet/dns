@@ -42,14 +42,20 @@ _ircs._tcp		SRV	0	0	6697	virgule
 _ircs._tcp		SRV	0	0	6697	sky.nullroute.eu.org.
 
 _kerberos._udp		SRV	0	0	88	virgule
+_kerberos._udp		SRV	5	0	88	wolke.nullroute.eu.org.
 
 _kerberos._tcp		SRV	0	0	88	virgule
+_kerberos._tcp		SRV	5	0	88	wolke.nullroute.eu.org.
 
 _kerberos-adm._tcp	SRV	0	0	749	virgule
 
 _kpasswd._udp		SRV	0	0	464	virgule
 
 _ldap._tcp		SRV	0	0	389	virgule
+;_ldap._tcp		SRV	5	0	389	wolke.nullroute.eu.org.
+
+_ldaps._tcp		SRV	0	0	636	virgule
+;_ldaps._tcp		SRV	5	0	636	wolke.nullroute.eu.org.
 
 irc		5m TXT	"IRC server round-robin"
 		A	62.113.218.19				; sky
