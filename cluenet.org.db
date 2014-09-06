@@ -5,7 +5,7 @@ $TTL 2h
 ; TODO: equal is dead, remove it from everywhere.
 
 @	SOA	virgule hostmaster (
-			2013063009	; serial
+			2013063010	; serial
 			1h		; refresh
 			900		; retry
 			1209600		; expire
@@ -98,7 +98,7 @@ mail		CNAME	ghs.google.com.
 rwho		CNAME	virgule
 ;search		CNAME	equal
 kdc.syslog	CNAME	virgule			; receives logs from KDCs
-www		CNAME	radian
+www		CNAME	virgule
 
 ;; servers
 
