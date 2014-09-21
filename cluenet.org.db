@@ -5,7 +5,7 @@ $TTL 2h
 ; TODO: equal is dead, remove it from everywhere.
 
 @	SOA	virgule hostmaster (
-			2013063010	; serial
+			2013063011	; serial
 			1h		; refresh
 			900		; retry
 			1209600		; expire
@@ -57,11 +57,11 @@ _ldap._tcp		SRV	0	0	389	virgule
 _ldaps._tcp		SRV	0	0	636	virgule
 ;_ldaps._tcp		SRV	5	0	636	wolke.nullroute.eu.org.
 
-irc		5m TXT	"IRC server round-robin"
-		A	62.113.218.19				; sky
-		AAAA	2a00:f48:1029::1:9b06:6ac3		; sky
-		A	109.74.192.129				; virgule
-		AAAA	2a01:7e00::f03c:91ff:fe96:5efd		; virgule
+irc	5m	TXT	"IRC server round-robin"
+	5m	A	62.113.218.19				; sky
+	5m	AAAA	2a00:f48:1029::1:9b06:6ac3		; sky
+	5m	A	109.74.192.129				; virgule
+	5m	AAAA	2a01:7e00::f03c:91ff:fe96:5efd		; virgule
 
 core		TXT	"core server (LDAP+Kerberos) round-robin"
 		A	109.74.192.129				; virgule
@@ -126,24 +126,6 @@ hawking		A	198.211.112.112
 		SSHFP	2 1 c6103710c3ff22114a593b1252df6536f998673e
 		SSHFP	2 2 deff8ee83f96eebaa04bcb9fa96af757f6dd0d439ffb5bc67a30e6ffaa51592e
 
-hex		A	109.74.199.212
-		SSHFP	1 1 918f00b05cb0c124fc4110a9338c9c521388d38f
-		SSHFP	1 2 fc4e99ddfeadeea5d7b769d6cb890ea91f54a81e9a00d910cd1759e921a558ed
-		SSHFP	2 1 a02ed1d71050ddb02773aa7991aa91ad9ab733c5
-		SSHFP	2 2 1e5980f01fc7719f053376683907c8f1ef5b515d7561db03deccbf3e82f6cfe8
-
-iodine		A	82.196.2.150
-
-negative	A	64.184.114.37
-
-phoenix		A	192.198.81.183
-		SSHFP	1 1 a1990df7d6644bb6df746a9b0b156f0128faec31
-		SSHFP	1 2 f047ffbb9772013a43915481a7fb8debaf9998e25c6b24404b45e1dbc137b364
-		SSHFP	2 1 a7e81d79b8cde6f6ed8d75ea83d557f56c7c013a
-		SSHFP	2 2 9021d26524b2995ebf6aaf7ee520299a178472f43e54b76f886109320361ce73
-
-;@		A	70.85.16.91
-;@		AAAA	2001:470:1f0f:112c::1
 radian		A	70.85.16.91
 radian		AAAA	2001:470:1f0f:112c::1
 		SSHFP	1 1 dfad6066be121cf36c7741fcb6aab14f46d11450
@@ -159,6 +141,7 @@ sigma		A	74.207.250.111
 
 @		A	109.74.192.129
 @		AAAA	2a01:7e00::f03c:91ff:fe96:5efd
+
 virgule		A	109.74.192.129
 virgule		AAAA	2a01:7e00::f03c:91ff:fe96:5efd
 		SSHFP	1 1 666ff80e4f295f713238dc6246595898b15e85b1
