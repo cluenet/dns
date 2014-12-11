@@ -5,7 +5,7 @@ $TTL 2h
 ; TODO: equal is dead, remove it from everywhere.
 
 @	SOA	virgule hostmaster (
-			2013063013	; serial
+			2013063014	; serial
 			1h		; refresh
 			900		; retry
 			1209600		; expire
@@ -127,7 +127,6 @@ hawking		A	198.211.112.112
 		SSHFP	2 2 deff8ee83f96eebaa04bcb9fa96af757f6dd0d439ffb5bc67a30e6ffaa51592e
 
 radian		A	70.85.16.91
-radian		AAAA	2001:470:1f0f:112c::1
 		SSHFP	1 1 dfad6066be121cf36c7741fcb6aab14f46d11450
 		SSHFP	1 2 76afdca3d755034c8f8d444e81c9e1ab5d8fbcab4544b58e9e59ee27f91255b0
 		SSHFP	2 1 e134a933d1126d91abead05fa34dae1397ca7ea8
