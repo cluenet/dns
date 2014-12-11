@@ -1,11 +1,12 @@
 ; vim: ft=bindzone:ts=8:sw=8:nowrap:noet:
 $ORIGIN cluenet.org.
-$TTL 2h
+;$TTL 2h
+$TTL 30m
 
 ; TODO: equal is dead, remove it from everywhere.
 
 @	SOA	virgule hostmaster (
-			2013063014	; serial
+			2013063017	; serial
 			1h		; refresh
 			900		; retry
 			1209600		; expire
@@ -17,13 +18,16 @@ $TTL 2h
 	;NS	ns1 ; equal
 	NS	ns2 ; virgule
 
-	MX	10 ASPMX.L.GOOGLE.COM.
-	MX	20 ALT1.ASPMX.L.GOOGLE.COM.
-	MX	20 ALT2.ASPMX.L.GOOGLE.COM.
-	MX	30 ASPMX2.GOOGLEMAIL.COM.
-	MX	30 ASPMX3.GOOGLEMAIL.COM.
-	MX	30 ASPMX4.GOOGLEMAIL.COM.
-	MX	30 ASPMX5.GOOGLEMAIL.COM.
+	; crazy ideas dept.
+	MX	10 sky.nullroute.eu.org.
+
+	;MX	10 ASPMX.L.GOOGLE.COM.
+	;MX	20 ALT1.ASPMX.L.GOOGLE.COM.
+	;MX	20 ALT2.ASPMX.L.GOOGLE.COM.
+	;MX	30 ASPMX2.GOOGLEMAIL.COM.
+	;MX	30 ASPMX3.GOOGLEMAIL.COM.
+	;MX	30 ASPMX4.GOOGLEMAIL.COM.
+	;MX	30 ASPMX5.GOOGLEMAIL.COM.
 
 	;TXT	"v=spf1 a mx ptr ~all"
 
