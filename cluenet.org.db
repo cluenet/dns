@@ -6,7 +6,7 @@ $TTL 30m
 ; TODO: equal is dead, remove it from everywhere.
 
 @	SOA	virgule hostmaster (
-			2013063018	; serial
+			2013063019	; serial
 			1h		; refresh
 			900		; retry
 			1209600		; expire
@@ -66,6 +66,8 @@ irc		TXT	"IRC server round-robin"
 		AAAA	2a00:f48:1029::1:9b06:6ac3		; sky
 		A	109.74.192.129				; virgule
 		AAAA	2a01:7e00::f03c:91ff:fe96:5efd		; virgule
+		; DANE - bind to Cluenet CA
+		TLSA	02 01 01 905079e60b5a93c3f7c12cbb8d9a3bf9f8d666bc25b894f3e7272233fed54c1f
 
 core		TXT	"core server (LDAP+Kerberos) round-robin"
 		A	109.74.192.129				; virgule
