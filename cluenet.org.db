@@ -6,7 +6,7 @@ $TTL 30m
 ; TODO: equal is dead, remove it from everywhere.
 
 @	SOA	virgule hostmaster (
-			2013063017	; serial
+			2013063018	; serial
 			1h		; refresh
 			900		; retry
 			1209600		; expire
@@ -61,11 +61,11 @@ _ldap._tcp		SRV	0	0	389	virgule
 _ldaps._tcp		SRV	0	0	636	virgule
 ;_ldaps._tcp		SRV	5	0	636	wolke.nullroute.eu.org.
 
-irc	5m	TXT	"IRC server round-robin"
-	5m	A	62.113.218.19				; sky
-	5m	AAAA	2a00:f48:1029::1:9b06:6ac3		; sky
-	5m	A	109.74.192.129				; virgule
-	5m	AAAA	2a01:7e00::f03c:91ff:fe96:5efd		; virgule
+irc		TXT	"IRC server round-robin"
+		A	62.113.218.19				; sky
+		AAAA	2a00:f48:1029::1:9b06:6ac3		; sky
+		A	109.74.192.129				; virgule
+		AAAA	2a01:7e00::f03c:91ff:fe96:5efd		; virgule
 
 core		TXT	"core server (LDAP+Kerberos) round-robin"
 		A	109.74.192.129				; virgule
