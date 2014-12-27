@@ -3,7 +3,7 @@ $ORIGIN cluenet.org.
 $TTL 30m
 
 @		SOA	virgule hostmaster (
-				113	; serial
+				114	; serial
 				1h	; refresh
 				15m	; retry
 				14d	; expire
@@ -120,7 +120,7 @@ hawking		A	198.211.112.112
 
 radian		A	70.85.16.91
 		SSHFP	1 2 76afdca3d755034c8f8d444e81c9e1ab5d8fbcab4544b58e9e59ee27f91255b0
-		SSHFP	2 2 65981d7fd79bd997a3ed3fae1a7176cf281f745216a69f74861d39bc6a7b1e
+		SSHFP	2 2 65981d7fd79bd997a3ed3fae1a7176cf281f745216a69f74861d39bc6a7b1e4c
 
 sigma		A	74.207.250.111
 		SSHFP	1 2 1a2cf7ea464e1afd271812a7d05b98567bb48492f02bab0af599b155d6c982f7
