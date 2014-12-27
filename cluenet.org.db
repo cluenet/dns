@@ -1,62 +1,38 @@
 ; vim: ft=bindzone:ts=8:sw=8:nowrap:noet:
 $ORIGIN cluenet.org.
-;$TTL 2h
 $TTL 30m
 
-; TODO: equal is dead, remove it from everywhere.
+@		SOA	virgule hostmaster (
+				112	; serial
+				1h	; refresh
+				15m	; retry
+				14d	; expire
+				5m	; minttl
+			)
+		; NOTE: glue still has "NS ns1" (equal)
+		NS	ns2 ; virgule
 
-@	SOA	virgule hostmaster (
-			112		; serial
-			1h		; refresh
-			900		; retry
-			1209600		; expire
-			300		; minttl
-		)
+		MX	10 ASPMX.L.GOOGLE.COM.
+		MX	20 ALT1.ASPMX.L.GOOGLE.COM.
+		MX	20 ALT2.ASPMX.L.GOOGLE.COM.
+		MX	30 ASPMX2.GOOGLEMAIL.COM.
+		MX	30 ASPMX3.GOOGLEMAIL.COM.
+		MX	30 ASPMX4.GOOGLEMAIL.COM.
+		MX	30 ASPMX5.GOOGLEMAIL.COM.
+		TXT	"v=spf1 a mx ptr ~all"
 
-	; NOTE: glue still has ns1→Equal, because cobi
+dlv		TXT	"DLV:1:oravbfsalwvb"
 
-	;NS	ns1 ; equal
-	NS	ns2 ; virgule
+;; sub-zones
 
-	MX	10 ASPMX.L.GOOGLE.COM.
-	MX	20 ALT1.ASPMX.L.GOOGLE.COM.
-	MX	20 ALT2.ASPMX.L.GOOGLE.COM.
-	MX	30 ASPMX2.GOOGLEMAIL.COM.
-	MX	30 ASPMX3.GOOGLEMAIL.COM.
-	MX	30 ASPMX4.GOOGLEMAIL.COM.
-	MX	30 ASPMX5.GOOGLEMAIL.COM.
+dyn		NS	virgule
+		DS	28771 5 1 40D4C91FD09B984F3DD1083769CCB7FAFC45FA5C
+		DS	28771 5 2 BEF15A02C6C4C0DDE8D7BA1947EF07ADF41E27CB16067CAA39732ADAAF4B7643
 
-	TXT	"v=spf1 a mx ptr ~all"
+;; service round-robins
 
-*.g	CNAME	ghs.google.com.
-
-dlv	0 TXT	"DLV:1:oravbfsalwvb"
-
-;; service SRV records and round-robins
-
-_kerberos		TXT	"CLUENET.ORG"
-
-_irc._tcp		SRV	0	0	6667	virgule
-_irc._tcp		SRV	0	0	6667	sky.nullroute.eu.org.
-
-_ircs._tcp		SRV	0	0	6697	virgule
-_ircs._tcp		SRV	0	0	6697	sky.nullroute.eu.org.
-
-_kerberos._udp		SRV	0	0	88	virgule
-_kerberos._udp		SRV	5	0	88	wolke.nullroute.eu.org.
-
-_kerberos._tcp		SRV	0	0	88	virgule
-_kerberos._tcp		SRV	5	0	88	wolke.nullroute.eu.org.
-
-_kerberos-adm._tcp	SRV	0	0	749	virgule
-
-_kpasswd._udp		SRV	0	0	464	virgule
-
-_ldap._tcp		SRV	0	0	389	virgule
-;_ldap._tcp		SRV	5	0	389	wolke.nullroute.eu.org.
-
-_ldaps._tcp		SRV	0	0	636	virgule
-;_ldaps._tcp		SRV	5	0	636	wolke.nullroute.eu.org.
+@		A	109.74.192.129				; virgule
+@		AAAA	2a01:7e00::f03c:91ff:fe96:5efd		; virgule
 
 irc		TXT	"IRC server round-robin"
 		A	62.113.218.19				; sky
@@ -84,9 +60,29 @@ krb5-admin	CNAME	kadmin.core
 ;ns1		A	109.74.200.177				; equal
 ns2		A	109.74.192.129				; virgule
 
-dyn		NS	virgule
-		DS	28771 5 1 40D4C91FD09B984F3DD1083769CCB7FAFC45FA5C
-		DS	28771 5 2 BEF15A02C6C4C0DDE8D7BA1947EF07ADF41E27CB16067CAA39732ADA AF4B7643
+;; service SRV records and round-robins
+
+_kerberos		TXT	"CLUENET.ORG"
+
+_irc._tcp		SRV	0	0	6667	virgule
+_irc._tcp		SRV	0	0	6667	sky.nullroute.eu.org.
+
+_ircs._tcp		SRV	0	0	6697	virgule
+_ircs._tcp		SRV	0	0	6697	sky.nullroute.eu.org.
+
+_kerberos._udp		SRV	0	0	88	virgule
+_kerberos._udp		SRV	5	0	88	wolke.nullroute.eu.org.
+
+_kerberos._tcp		SRV	0	0	88	virgule
+_kerberos._tcp		SRV	5	0	88	wolke.nullroute.eu.org.
+
+_kerberos-adm._tcp	SRV	0	0	749	virgule
+
+_kpasswd._udp		SRV	0	0	464	virgule
+
+_ldap._tcp		SRV	0	0	389	virgule
+
+_ldaps._tcp		SRV	0	0	636	virgule
 
 ;; service subdomains
 
@@ -94,12 +90,12 @@ cluebot		CNAME	virgule
 report.cluebot	CNAME	bots.wmflabs.org.
 review.cluebot	CNAME	ghs.google.com.
 
-;auth		CNAME	equal
+*.g		CNAME	ghs.google.com.
+mail		CNAME	ghs.google.com.
+
 a.core		CNAME	www
 irc4		CNAME	irc
-mail		CNAME	ghs.google.com.
 rwho		CNAME	virgule
-;search		CNAME	equal
 kdc.syslog	CNAME	virgule			; receives logs from KDCs
 www		CNAME	virgule
 
@@ -141,9 +137,6 @@ sigma		A	74.207.250.111
 		SSHFP	2 1 8c773f92c254866efb42bd68d7c9db7411cd3f07
 		SSHFP	2 2 0793fe23bc6f03c4adb7f7ea60a49de62dbe7127a60dcbce6946ce73cdcd5654
 
-@		A	109.74.192.129
-@		AAAA	2a01:7e00::f03c:91ff:fe96:5efd
-
 virgule		A	109.74.192.129
 virgule		AAAA	2a01:7e00::f03c:91ff:fe96:5efd
 		SSHFP	1 1 666ff80e4f295f713238dc6246595898b15e85b1
@@ -152,15 +145,6 @@ virgule		AAAA	2a01:7e00::f03c:91ff:fe96:5efd
 		SSHFP	2 2 36aef1e2b034d58b41a56c3634e463f204cf4d483c80a76fd07c436164970a57
 		SSHFP	3 1 19253400697fa29c8d47420f7c93c50adb1319c0
 		SSHFP	3 2 1e5c24e5d205866b2ecbbcfe77aa18ec0fb2341582d2685f14aa88546ae56ae1
-
-;; user SIG(0) keys and other stuff
-
-grawity		KEY	0 3 5 (
-				AwEAAa9KmIzgc2g9SyLAm0SpJKR/grVohOsOL+Vy0SBS7HXFiwb7U+K9
-				g4EMaTJo34ERw1zBp57kC9DcVTo+fqi4POyOcXJ+DYfhy2RnkvNznUOs
-				vOswE9WpzlZchV2vWlTBUwsL/K4Fp7e7YkFjK46RtxMe+xxQHm5Aps+j
-				RWIIqt3/
-			)
 
 ;; Cobi has his own section
 
