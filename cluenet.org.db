@@ -6,7 +6,7 @@ $TTL 30m
 ; TODO: equal is dead, remove it from everywhere.
 
 @	SOA	virgule hostmaster (
-			2013063020	; serial
+			4160546667	; serial
 			1h		; refresh
 			900		; retry
 			1209600		; expire
