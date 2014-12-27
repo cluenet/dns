@@ -26,7 +26,7 @@ $TTL 30m
 	MX	30 ASPMX4.GOOGLEMAIL.COM.
 	MX	30 ASPMX5.GOOGLEMAIL.COM.
 
-	;TXT	"v=spf1 a mx ptr ~all"
+	TXT	"v=spf1 a mx ptr ~all"
 
 *.g	CNAME	ghs.google.com.
 
