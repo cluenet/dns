@@ -3,7 +3,7 @@ $ORIGIN cluenet.org.
 $TTL 30m
 
 @		SOA	virgule hostmaster (
-				116	; serial
+				117	; serial
 				1h	; refresh
 				15m	; retry
 				14d	; expire
@@ -21,7 +21,7 @@ $TTL 30m
 		MX	30 ASPMX5.GOOGLEMAIL.COM.
 		TXT	"v=spf1 a mx ptr ~all"
 
-dlv		TXT	"DLV:1:mnifiyfbtukp"
+dlv		TXT	"DLV:1:cvpmefxqttkb"
 
 ;; sub-zones
 
