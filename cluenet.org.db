@@ -3,7 +3,7 @@ $ORIGIN cluenet.org.
 $TTL 30m
 
 @		SOA	virgule hostmaster (
-				120	; serial
+				121	; serial
 				1h	; refresh
 				15m	; retry
 				14d	; expire
@@ -20,6 +20,7 @@ $TTL 30m
 		MX	30 ASPMX4.GOOGLEMAIL.COM.
 		MX	30 ASPMX5.GOOGLEMAIL.COM.
 		TXT	"v=spf1 a mx ptr ~all"
+		SPF	"v=spf1 a mx ptr ~all"
 
 dlv		TXT	"DLV:1:cvpmefxqttkb"
 
