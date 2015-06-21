@@ -3,7 +3,7 @@ $ORIGIN cluenet.org.
 $TTL 30m
 
 @		SOA	virgule hostmaster (
-				124	; serial
+				125	; serial
 				1h	; refresh
 				15m	; retry
 				14d	; expire
@@ -41,7 +41,7 @@ irc		TXT	"IRC server round-robin"
 		AAAA	2a00:1a28:1157:143::2			; sky
 		A	109.74.192.129				; virgule
 		AAAA	2a01:7e00::f03c:91ff:fe96:5efd		; virgule
-		A	99.234.115.52				; LB-canadian
+		A	99.234.115.52				; krauss
 		; DANE - bind to Cluenet CA
 		TLSA	02 01 01 905079e60b5a93c3f7c12cbb8d9a3bf9f8d666bc25b894f3e7272233fed54c1f
 
@@ -119,8 +119,6 @@ aleph		A	87.81.201.208
 		SSHFP	3 1 76471cb83e1c9281501016edcbe2a130d0bc8068
 		SSHFP	3 2 830f5f520b47d144003c84412c415f0cfc26609d466104ceecaddf9e15e93521
 
-canadian	CNAME	LuminolBlue.asuscomm.com.
-
 eta		CNAME	eta.dyn.cluenet.org.
 
 gamma		CNAME	gamma.thehawken.org.
@@ -130,6 +128,8 @@ hawking		A	198.211.112.112
 		SSHFP	1 2 22fd110f6bbd5ad64d8be37eab2b97c72907516dfbc639d7ccd1cf4e8816b51a
 		SSHFP	2 1 c6103710c3ff22114a593b1252df6536f998673e
 		SSHFP	2 2 deff8ee83f96eebaa04bcb9fa96af757f6dd0d439ffb5bc67a30e6ffaa51592e
+
+krauss		CNAME	LuminolBlue.asuscomm.com.
 
 radian		A	70.85.16.91
 		SSHFP	1 1 dfad6066be121cf36c7741fcb6aab14f46d11450
