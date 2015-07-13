@@ -3,7 +3,7 @@ $ORIGIN cluenet.org.
 $TTL 30m
 
 @		SOA	virgule hostmaster (
-				125	; serial
+				126	; serial
 				1h	; refresh
 				15m	; retry
 				14d	; expire
@@ -111,7 +111,7 @@ abacus		A	50.76.35.186
 		SSHFP	2 1 736342716f9a71e2e39f4a6dd8aa2079edf994a1
 		SSHFP	2 2 5ef885a164fba648e8ac0ae3f5e3bab2279a0962267da43e42919b1f98795ee0
 
-aleph		A	87.81.201.208
+aleph		A	81.174.155.55
 		SSHFP	1 1 c8ef9609892203bcf73bae2619adfa1c31a88c11
 		SSHFP	1 2 d4dcfc0e17425945d89929dd7c948a5e399f08fadc6f66056e87046ee1bee4fd
 		SSHFP	2 1 a2898899e26281b585c37049704e3fa94aeb63cb
