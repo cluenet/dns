@@ -3,7 +3,7 @@ $ORIGIN cluenet.org.
 $TTL 30m
 
 @		SOA	virgule hostmaster (
-				126	; serial
+				127	; serial
 				1h	; refresh
 				15m	; retry
 				14d	; expire
@@ -41,7 +41,6 @@ irc		TXT	"IRC server round-robin"
 		AAAA	2a00:1a28:1157:143::2			; sky
 		A	109.74.192.129				; virgule
 		AAAA	2a01:7e00::f03c:91ff:fe96:5efd		; virgule
-		A	99.234.115.52				; krauss
 		; DANE - bind to Cluenet CA
 		TLSA	02 01 01 905079e60b5a93c3f7c12cbb8d9a3bf9f8d666bc25b894f3e7272233fed54c1f
 
