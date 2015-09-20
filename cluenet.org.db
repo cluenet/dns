@@ -59,8 +59,9 @@ ldap		CNAME	core
 kerberos	CNAME	core
 krb5-admin	CNAME	kadmin.core
 
-;ns1		A	109.74.200.177				; equal
 ns2		A	109.74.192.129				; virgule
+ns4		A	212.71.255.217				; wolke.nullroute.eu.org
+ns5		A	31.220.7.228				; sky.nullroute.eu.org
 
 ;; service SRV records and round-robins
 
