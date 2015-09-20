@@ -3,7 +3,7 @@ $ORIGIN cluenet.org.
 $TTL 30m
 
 @		SOA	virgule hostmaster (
-				123	; serial
+				124	; serial
 				1h	; refresh
 				15m	; retry
 				14d	; expire
@@ -104,7 +104,9 @@ www		CNAME	virgule
 
 ;; servers
 
-abacus		A	50.76.35.186
+abacus		HINFO	armv5tel Linux
+		A	50.76.35.186
+		AAAA	2601:647:cb00:be00:250:43ff:fe01:dd40
 		SSHFP	1 1 3d5724dade61ec17cf93f2c059343529ee46864a
 		SSHFP	1 2 34a62b8fceecb635fddbb8b8c41bf9b5d66c793e2e4bdce485ba85e2737910ce
 		SSHFP	2 1 736342716f9a71e2e39f4a6dd8aa2079edf994a1
@@ -117,8 +119,6 @@ aleph		A	87.81.201.208
 		SSHFP	2 2 698bc044916f8999b44fc13b8403308a82c01daf91b668dd698b19bac7f57d8b
 		SSHFP	3 1 76471cb83e1c9281501016edcbe2a130d0bc8068
 		SSHFP	3 2 830f5f520b47d144003c84412c415f0cfc26609d466104ceecaddf9e15e93521
-
-canadian	CNAME	LuminolBlue.asuscomm.com.
 
 eta		CNAME	eta.dyn.cluenet.org.
 
@@ -142,8 +142,9 @@ sigma		A	74.207.250.111
 		SSHFP	2 1 8c773f92c254866efb42bd68d7c9db7411cd3f07
 		SSHFP	2 2 0793fe23bc6f03c4adb7f7ea60a49de62dbe7127a60dcbce6946ce73cdcd5654
 
-virgule		A	109.74.192.129
-virgule		AAAA	2a01:7e00::f03c:91ff:fe96:5efd
+virgule		HINFO	x86_64 Linux
+		A	109.74.192.129
+		AAAA	2a01:7e00::f03c:91ff:fe96:5efd
 		SSHFP	1 1 666ff80e4f295f713238dc6246595898b15e85b1
 		SSHFP	1 2 711ae42074aa7bdb91237c98ef7b1c4dc5f5ded03815f402a9cc771a60f6ac3b
 		SSHFP	2 1 8abe00ee446f99d81bd2c18eb9352af2b416e5d3
