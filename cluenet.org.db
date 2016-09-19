@@ -3,14 +3,15 @@ $ORIGIN cluenet.org.
 $TTL 30m
 
 @		SOA	virgule hostmaster (
-				125	; serial
+				128	; serial
 				1h	; refresh
 				15m	; retry
 				14d	; expire
 				5m	; minttl
 			)
-		; NOTE: glue still has "NS ns1" (equal)
 		NS	ns2 ; virgule
+		NS	ns4 ; wolke
+		NS	ns5 ; sky
 
 		MX	10 ASPMX.L.GOOGLE.COM.
 		MX	20 ALT1.ASPMX.L.GOOGLE.COM.
@@ -40,7 +41,6 @@ irc		TXT	"IRC server round-robin"
 		AAAA	2a00:1a28:1157:143::2			; sky
 		A	109.74.192.129				; virgule
 		AAAA	2a01:7e00::f03c:91ff:fe96:5efd		; virgule
-		A	99.234.115.52				; LB-canadian
 		; DANE - bind to Cluenet CA
 		TLSA	02 01 01 905079e60b5a93c3f7c12cbb8d9a3bf9f8d666bc25b894f3e7272233fed54c1f
 
@@ -112,7 +112,7 @@ abacus		HINFO	armv5tel Linux
 		SSHFP	2 1 736342716f9a71e2e39f4a6dd8aa2079edf994a1 ; (ssh-dss, sha1)
 		SSHFP	2 2 5ef885a164fba648e8ac0ae3f5e3bab2279a0962267da43e42919b1f98795ee0 ; (ssh-dss, sha256)
 
-aleph		A	87.81.201.208
+aleph		A	81.174.155.55
 		SSHFP	1 1 c8ef9609892203bcf73bae2619adfa1c31a88c11 ; (ssh-rsa, sha1)
 		SSHFP	1 2 d4dcfc0e17425945d89929dd7c948a5e399f08fadc6f66056e87046ee1bee4fd ; (ssh-rsa, sha256)
 		SSHFP	2 1 a2898899e26281b585c37049704e3fa94aeb63cb ; (ssh-dss, sha1)
