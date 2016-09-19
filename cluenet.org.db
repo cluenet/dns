@@ -3,7 +3,7 @@ $ORIGIN cluenet.org.
 $TTL 30m
 
 @		SOA	virgule hostmaster (
-				124	; serial
+				125	; serial
 				1h	; refresh
 				15m	; retry
 				14d	; expire
@@ -147,10 +147,10 @@ virgule		HINFO	x86_64 Linux
 		AAAA	2a01:7e00::f03c:91ff:fe96:5efd
 		SSHFP	1 1 666ff80e4f295f713238dc6246595898b15e85b1 ; (ssh-rsa, sha1)
 		SSHFP	1 2 711ae42074aa7bdb91237c98ef7b1c4dc5f5ded03815f402a9cc771a60f6ac3b ; (ssh-rsa, sha256)
-		SSHFP	2 1 8abe00ee446f99d81bd2c18eb9352af2b416e5d3 ; (ssh-dss, sha1)
-		SSHFP	2 2 36aef1e2b034d58b41a56c3634e463f204cf4d483c80a76fd07c436164970a57 ; (ssh-dss, sha256)
 		SSHFP	3 1 19253400697fa29c8d47420f7c93c50adb1319c0 ; (ecdsa-sha2-nistp384, sha1)
 		SSHFP	3 2 1e5c24e5d205866b2ecbbcfe77aa18ec0fb2341582d2685f14aa88546ae56ae1 ; (ecdsa-sha2-nistp384, sha256)
+		SSHFP	4 1 5e8bfda913da7364c0abad4ab2cd62bb64fa3859 ; (ssh-ed25519, sha1)
+		SSHFP	4 2 b02c37b535435960d4d5adeb00910ee642ebb0fad143c75a236b0b8d8d60b5cc ; (ssh-ed25519, sha256)
 
 ;; Cobi has his own section
 
