@@ -3,7 +3,7 @@ $ORIGIN cluenet.org.
 $TTL 30m
 
 @		SOA	virgule hostmaster (
-				128	; serial
+				130	; serial
 				1h	; refresh
 				15m	; retry
 				14d	; expire
@@ -37,8 +37,8 @@ dyn		NS	virgule
 @		AAAA	2a01:7e00::f03c:91ff:fe96:5efd		; virgule
 
 irc		TXT	"IRC server round-robin"
-		A	31.220.7.228				; sky
-		AAAA	2a00:1a28:1157:143::2			; sky
+		A	31.220.42.129				; sky
+		AAAA	2a01:6f0:ffff:1::2b4d			; sky
 		A	109.74.192.129				; virgule
 		AAAA	2a01:7e00::f03c:91ff:fe96:5efd		; virgule
 		; DANE - bind to Cluenet CA
@@ -61,7 +61,8 @@ krb5-admin	CNAME	kadmin.core
 
 ns2		A	109.74.192.129				; virgule
 ns4		A	212.71.255.217				; wolke.nullroute.eu.org
-ns5		A	31.220.7.228				; sky.nullroute.eu.org
+ns5		A	31.220.42.129				; sky.nullroute.eu.org
+ns5		AAAA	2a01:6f0:ffff:1::2b4d			; sky.nullroute.eu.org
 
 ;; service SRV records and round-robins
 
