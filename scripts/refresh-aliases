@@ -1,0 +1,73 @@
+#!/usr/bin/env perl
+use warnings;
+use strict;
+use List::MoreUtils qw(uniq);
+
+sub _call {
+	my (@args) = @_;
+	if (open(my $fh, "-|", @args)) {
+		my $str = <$fh>;
+		chomp($str);
+		close($fh);
+		return $str;
+	}
+}
+
+sub resolve {
+	my ($name, $type) = @_;
+	if ($type eq "A") {
+		return split(/\s+/, _call("name2addr", "-4", $name));
+	} elsif ($type eq "AAAA") {
+		return split(/\s+/, _call("name2addr", "-6", $name));
+	}
+}
+
+sub finalize_alias {
+	my ($target, @prefixes) = @_;
+
+	my @ipv4s = resolve($target, "A");
+	my @ipv6s = resolve($target, "AAAA");
+
+	for my $pre (uniq @prefixes) {
+		print $pre, "A\t$_ ; => $target\n" for @ipv4s;
+		print $pre, "AAAA\t$_ ; => $target\n" for @ipv6s;
+	}
+}
+
+my $is_alias = 0;
+my $alias_label = "";
+my $alias_indent = "";
+my $alias_target = "";
+
+while (<STDIN>) {
+	if (/^(\S*)(.+\s+)(A|AAAA)\s+.+\s+; => (\S+)$/) {
+		my $r_label = $1;
+		my $r_indent = $2;
+		my $r_target = $4;
+		if ($r_label eq "") {
+			$r_label = $alias_label;
+		}
+		if (!$is_alias || $alias_label ne $r_label || $alias_target ne $r_target) {
+			if ($is_alias) {
+				finalize_alias($alias_target, $alias_label.$alias_indent);
+			}
+			$is_alias = 1;
+			$alias_label = $r_label;
+			$alias_indent = $r_indent;
+			$alias_target = $r_target;
+		}
+	}
+	else {
+		if ($is_alias) {
+			finalize_alias($alias_target, $alias_label.$alias_indent);
+			$is_alias = 0;
+		}
+		if (/^([^\s;]\S*)/) {
+			$alias_label = $1;
+		}
+		print;
+	}
+}
+if ($is_alias) {
+	finalize_alias($alias_target, $alias_label.$alias_indent);
+}

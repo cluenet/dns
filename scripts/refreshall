@@ -1,0 +1,25 @@
+#!/usr/bin/env bash
+
+err() { printf '\e[1;31merror:\e[m %s\n' "$*"; }
+
+set -o pipefail
+shopt -s nullglob
+
+err=0
+tmp=$(mktemp "./zone.XXXXXXXX")
+
+for file in ./*.db; do
+	if [[ ! -L "$file" ]]; then
+		cp "$file" "$tmp"
+		scripts/refresh-aliases < "$tmp" > "$file"
+		diff -u "$tmp" "$file" && continue
+		if ! scripts/checkzone "$file" | grep -v '^OK$'; then
+			((++err))
+		fi
+	fi
+done
+
+git diff
+
+rm -f "$tmp"
+exit $err
