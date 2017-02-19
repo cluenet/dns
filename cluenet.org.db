@@ -9,9 +9,9 @@ $TTL 30m
 				14d	; expire
 				5m	; minttl
 			)
-		NS	ns2 ; virgule
-		NS	ns4 ; wolke
-		NS	ns5 ; sky
+		NS	ns2 ; virgule.cluenet.org
+		NS	ns4 ; wolke.nullroute.eu.org
+		NS	ns5 ; sky.nullroute.eu.org -- out-of-date again...
 
 		MX	10 ASPMX.L.GOOGLE.COM.
 		MX	20 ALT1.ASPMX.L.GOOGLE.COM.
@@ -33,36 +33,36 @@ dyn		NS	virgule
 
 ;; service round-robins
 
-@		A	109.74.192.129				; virgule
-@		AAAA	2a01:7e00::f03c:91ff:fe96:5efd		; virgule
+@		A	109.74.192.129				; => virgule.cluenet.org
+@		AAAA	2a01:7e00::f03c:91ff:fe96:5efd		; => virgule.cluenet.org
 
 irc		TXT	"IRC server round-robin"
-		A	31.220.42.129				; sky
-		AAAA	2a01:6f0:ffff:1::2b4d			; sky
-		A	109.74.192.129				; virgule
-		AAAA	2a01:7e00::f03c:91ff:fe96:5efd		; virgule
+		A	31.220.42.129				; => sky.nullroute.eu.org
+		AAAA	2a01:6f0:ffff:1::2b4d			; => sky.nullroute.eu.org
+		A	109.74.192.129				; => virgule.cluenet.org
+		AAAA	2a01:7e00::f03c:91ff:fe96:5efd		; => virgule.cluenet.org
 		; DANE - bind to Cluenet CA
 		TLSA	02 01 01 905079e60b5a93c3f7c12cbb8d9a3bf9f8d666bc25b894f3e7272233fed54c1f
 
 core		TXT	"core server (LDAP+Kerberos) round-robin"
-		A	109.74.192.129				; virgule
-		AAAA	2a01:7e00::f03c:91ff:fe96:5efd		; virgule
+		A	109.74.192.129				; => virgule.cluenet.org
+		AAAA	2a01:7e00::f03c:91ff:fe96:5efd		; => virgule.cluenet.org
 
 kadmin.core	TXT	"kadmind round-robin"
 		; Not all servers are in the kadmin rr.
 		; 1) MIT kadmind can only serve one realm per instance.
 		; 2) It is a pain to replicate kadm5.acl over many servers.
-		A	109.74.192.129				; virgule
-		AAAA	2a01:7e00::f03c:91ff:fe96:5efd		; virgule
+		A	109.74.192.129				; => virgule.cluenet.org
+		AAAA	2a01:7e00::f03c:91ff:fe96:5efd		; => virgule.cluenet.org
 
 ldap		CNAME	core
 kerberos	CNAME	core
 krb5-admin	CNAME	kadmin.core
 
-ns2		A	109.74.192.129				; virgule
-ns4		A	212.71.255.217				; wolke.nullroute.eu.org
-ns5		A	31.220.42.129				; sky.nullroute.eu.org
-ns5		AAAA	2a01:6f0:ffff:1::2b4d			; sky.nullroute.eu.org
+ns2		A	109.74.192.129				; => virgule.cluenet.org
+ns4		A	212.71.255.217				; => wolke.nullroute.eu.org
+ns5		A	31.220.42.129				; => sky.nullroute.eu.org
+ns5		AAAA	2a01:6f0:ffff:1::2b4d			; => sky.nullroute.eu.org
 
 ;; service SRV records and round-robins
 
