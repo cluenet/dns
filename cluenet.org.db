@@ -50,8 +50,8 @@ kadmin.core	TXT	"kadmind round-robin"
 		; Not all servers are in the kadmin rr.
 		; 1) MIT kadmind can only serve one realm per instance.
 		; 2) It is a pain to replicate kadm5.acl over many servers.
-kadmin.core		A	109.74.192.129 ; => virgule.cluenet.org
-kadmin.core		AAAA	2a01:7e00::f03c:91ff:fe96:5efd ; => virgule.cluenet.org
+kadmin.core	A	109.74.192.129 ; => virgule.cluenet.org
+kadmin.core	AAAA	2a01:7e00::f03c:91ff:fe96:5efd ; => virgule.cluenet.org
 
 ldap		CNAME	core
 kerberos	CNAME	core
