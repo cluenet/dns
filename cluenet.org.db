@@ -36,7 +36,7 @@ dyn		NS	virgule
 
 irc		TXT	"IRC server round-robin"
 irc		A	31.220.42.129 ; => sky.nullroute.eu.org
-irc		AAAA	2a01:6f0:ffff:1::2b4d ; => sky.nullroute.eu.org
+irc		AAAA	2a01:6f0:ffff:1::2 ; => sky.nullroute.eu.org
 irc		A	109.74.192.129 ; => virgule.cluenet.org
 irc		AAAA	2a01:7e00::f03c:91ff:fe96:5efd ; => virgule.cluenet.org
 		; DANE - bind to Cluenet CA
@@ -62,7 +62,7 @@ ns2		AAAA	2a01:7e00::f03c:91ff:fe96:5efd ; => virgule.cluenet.org
 ns4		A	212.71.255.217 ; => wolke.nullroute.eu.org
 ns4		AAAA	2a01:7e00::f03c:91ff:fe18:5b7 ; => wolke.nullroute.eu.org
 ns5		A	31.220.42.129 ; => sky.nullroute.eu.org
-ns5		AAAA	2a01:6f0:ffff:1::2b4d ; => sky.nullroute.eu.org
+ns5		AAAA	2a01:6f0:ffff:1::2 ; => sky.nullroute.eu.org
 
 ;; service SRV records and round-robins
 
