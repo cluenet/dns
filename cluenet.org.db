@@ -3,7 +3,7 @@ $ORIGIN cluenet.org.
 $TTL 30m
 
 @		SOA	virgule hostmaster (
-				134	; serial
+				135	; serial
 				1h	; refresh
 				15m	; retry
 				14d	; expire
@@ -124,11 +124,6 @@ hawking		A	198.211.112.112
 		SSHFP	1 1 60f25057945d6cab589e552c8b9968900994a00f ; (ssh-rsa, sha1)
 		SSHFP	1 2 22fd110f6bbd5ad64d8be37eab2b97c72907516dfbc639d7ccd1cf4e8816b51a ; (ssh-rsa, sha256)
 		SSHFP	2 2 deff8ee83f96eebaa04bcb9fa96af757f6dd0d439ffb5bc67a30e6ffaa51592e ; (ssh-dss, sha256)
-
-radian		A	70.85.16.91
-		SSHFP	1 1 dfad6066be121cf36c7741fcb6aab14f46d11450 ; (ssh-rsa, sha1)
-		SSHFP	1 2 76afdca3d755034c8f8d444e81c9e1ab5d8fbcab4544b58e9e59ee27f91255b0 ; (ssh-rsa, sha256)
-		SSHFP	2 2 65981d7fd79bd997a3ed3fae1a7176cf281f745216a69f74861d39bc6a7b1e4c ; (ssh-dss, sha256)
 
 sigma		A	74.207.250.111
 		SSHFP	1 1 4de6de12e46960207332eae919667a639390a2c9 ; (ssh-rsa, sha1)
