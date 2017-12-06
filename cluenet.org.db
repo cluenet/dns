@@ -3,7 +3,7 @@ $ORIGIN cluenet.org.
 $TTL 30m
 
 @		SOA	virgule hostmaster (
-				135	; serial
+				136	; serial
 				1h	; refresh
 				15m	; retry
 				14d	; expire
@@ -44,16 +44,11 @@ core		TXT	"core server (LDAP+Kerberos) round-robin"
 core		A	109.74.192.129 ; => virgule.cluenet.org
 core		AAAA	2a01:7e00::f03c:91ff:fe96:5efd ; => virgule.cluenet.org
 
-kadmin.core	TXT	"kadmind round-robin"
-		; Not all servers are in the kadmin rr.
-		; 1) MIT kadmind can only serve one realm per instance.
-		; 2) It is a pain to replicate kadm5.acl over many servers.
-kadmin.core	A	109.74.192.129 ; => virgule.cluenet.org
-kadmin.core	AAAA	2a01:7e00::f03c:91ff:fe96:5efd ; => virgule.cluenet.org
-
-ldap		CNAME	core
+kadmin		CNAME	virgule
+kadmin.core	CNAME	kadmin
 kerberos	CNAME	core
-krb5-admin	CNAME	kadmin.core
+krb5-admin	CNAME	kadmin
+ldap		CNAME	core
 
 ns2		A	109.74.192.129 ; => virgule.cluenet.org
 ns2		AAAA	2a01:7e00::f03c:91ff:fe96:5efd ; => virgule.cluenet.org
