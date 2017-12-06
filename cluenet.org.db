@@ -3,7 +3,7 @@ $ORIGIN cluenet.org.
 $TTL 30m
 
 @		SOA	virgule hostmaster (
-				137	; serial
+				138	; serial
 				1h	; refresh
 				15m	; retry
 				14d	; expire
@@ -83,7 +83,6 @@ _ldaps._tcp		SRV	0	0	636	virgule
 
 ;; service subdomains
 
-cluebot		CNAME	virgule
 report.cluebot	CNAME	bots.wmflabs.org.
 review.cluebot	CNAME	ghs.google.com.
 
