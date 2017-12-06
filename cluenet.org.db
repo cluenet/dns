@@ -3,7 +3,7 @@ $ORIGIN cluenet.org.
 $TTL 30m
 
 @		SOA	virgule hostmaster (
-				136	; serial
+				137	; serial
 				1h	; refresh
 				15m	; retry
 				14d	; expire
@@ -100,7 +100,6 @@ www		CNAME	virgule
 
 abacus		HINFO	armv5tel Linux
 		A	50.76.35.186
-		AAAA	2601:647:cb00:be00:250:43ff:fe01:dd40
 		SSHFP	1 1 3d5724dade61ec17cf93f2c059343529ee46864a ; (ssh-rsa, sha1)
 		SSHFP	1 2 34a62b8fceecb635fddbb8b8c41bf9b5d66c793e2e4bdce485ba85e2737910ce ; (ssh-rsa, sha256)
 		SSHFP	2 2 5ef885a164fba648e8ac0ae3f5e3bab2279a0962267da43e42919b1f98795ee0 ; (ssh-dss, sha256)
