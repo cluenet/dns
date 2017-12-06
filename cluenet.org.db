@@ -3,7 +3,7 @@ $ORIGIN cluenet.org.
 $TTL 30m
 
 @		SOA	virgule hostmaster (
-				133	; serial
+				134	; serial
 				1h	; refresh
 				15m	; retry
 				14d	; expire
@@ -39,8 +39,6 @@ irc		A	31.220.42.129 ; => sky.nullroute.eu.org
 irc		AAAA	2a01:6f0:ffff:1::2 ; => sky.nullroute.eu.org
 irc		A	109.74.192.129 ; => virgule.cluenet.org
 irc		AAAA	2a01:7e00::f03c:91ff:fe96:5efd ; => virgule.cluenet.org
-		; DANE - bind to Cluenet CA
-		TLSA	02 01 01 905079e60b5a93c3f7c12cbb8d9a3bf9f8d666bc25b894f3e7272233fed54c1f
 
 core		TXT	"core server (LDAP+Kerberos) round-robin"
 core		A	109.74.192.129 ; => virgule.cluenet.org
