@@ -3,7 +3,7 @@ $ORIGIN cluenet.org.
 $TTL 30m
 
 @		SOA	virgule hostmaster (
-				139	; serial
+				140	; serial
 				1h	; refresh
 				15m	; retry
 				14d	; expire
@@ -125,6 +125,7 @@ sigma		A	74.207.250.111
 virgule		HINFO	x86_64 Linux
 		A	109.74.192.129
 		AAAA	2a01:7e00::f03c:91ff:fe96:5efd
+		AAAA	2a01:7e00:e000:1d6::1
 		SSHFP	1 1 666ff80e4f295f713238dc6246595898b15e85b1 ; (ssh-rsa, sha1)
 		SSHFP	1 2 711ae42074aa7bdb91237c98ef7b1c4dc5f5ded03815f402a9cc771a60f6ac3b ; (ssh-rsa, sha256)
 		SSHFP	3 2 1e5c24e5d205866b2ecbbcfe77aa18ec0fb2341582d2685f14aa88546ae56ae1 ; (ecdsa-sha2-nistp384, sha256)
