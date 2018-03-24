@@ -10,6 +10,7 @@ tmp=$(mktemp "./zone.XXXXXXXX")
 
 for file in ./*.db; do
 	if [[ ! -L "$file" ]]; then
+		echo "refreshall: updating $file"
 		cp "$file" "$tmp"
 		scripts/refresh-aliases < "$tmp" > "$file"
 		diff -u "$tmp" "$file" && continue
