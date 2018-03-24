@@ -8,7 +8,9 @@ shopt -s nullglob
 err=0
 tmp=$(mktemp "./zone.XXXXXXXX")
 
-for file in ./*.db; do
+(( $# )) || set -- ./*.db
+
+for file in "$@"; do
 	if [[ ! -L "$file" ]]; then
 		echo "refreshall: updating $file"
 		cp "$file" "$tmp"

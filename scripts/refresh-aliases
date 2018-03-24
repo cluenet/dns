@@ -9,7 +9,7 @@ sub resolve {
 
 	my @rr = rr($name, $type);
 
-	return map {$_->address} grep {$_->type eq $type} @rr;
+	return map {$_->address} rrsort($type, "address", @rr);
 }
 
 sub finalize {
