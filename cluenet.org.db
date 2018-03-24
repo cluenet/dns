@@ -3,7 +3,7 @@ $ORIGIN cluenet.org.
 $TTL 30m
 
 @		SOA	virgule hostmaster (
-				140	; serial
+				141	; serial
 				1h	; refresh
 				15m	; retry
 				14d	; expire
@@ -31,17 +31,20 @@ dyn		NS	virgule
 ;; service round-robins
 
 @		A	109.74.192.129 ; => virgule.cluenet.org
-@		AAAA	2a01:7e00::f03c:91ff:fe96:5efd ; => virgule.cluenet.org
+@		AAAA	2a01:7e00:e000:1d6:0:0:0:1 ; => virgule.cluenet.org
+@		AAAA	2a01:7e00:0:0:f03c:91ff:fe96:5efd ; => virgule.cluenet.org
 
 irc		TXT	"IRC server round-robin"
 irc		A	31.220.42.129 ; => sky.nullroute.eu.org
-irc		AAAA	2a01:6f0:ffff:1::2 ; => sky.nullroute.eu.org
+irc		AAAA	2a01:6f0:ffff:1:0:0:0:2 ; => sky.nullroute.eu.org
 irc		A	109.74.192.129 ; => virgule.cluenet.org
-irc		AAAA	2a01:7e00::f03c:91ff:fe96:5efd ; => virgule.cluenet.org
+irc		AAAA	2a01:7e00:e000:1d6:0:0:0:1 ; => virgule.cluenet.org
+irc		AAAA	2a01:7e00:0:0:f03c:91ff:fe96:5efd ; => virgule.cluenet.org
 
 core		TXT	"core server (LDAP+Kerberos) round-robin"
 core		A	109.74.192.129 ; => virgule.cluenet.org
-core		AAAA	2a01:7e00::f03c:91ff:fe96:5efd ; => virgule.cluenet.org
+core		AAAA	2a01:7e00:e000:1d6:0:0:0:1 ; => virgule.cluenet.org
+core		AAAA	2a01:7e00:0:0:f03c:91ff:fe96:5efd ; => virgule.cluenet.org
 
 kadmin		CNAME	virgule
 kadmin.core	CNAME	kadmin
@@ -50,11 +53,13 @@ krb5-admin	CNAME	kadmin
 ldap		CNAME	core
 
 ns2		A	109.74.192.129 ; => virgule.cluenet.org
-ns2		AAAA	2a01:7e00::f03c:91ff:fe96:5efd ; => virgule.cluenet.org
+ns2		AAAA	2a01:7e00:e000:1d6:0:0:0:1 ; => virgule.cluenet.org
+ns2		AAAA	2a01:7e00:0:0:f03c:91ff:fe96:5efd ; => virgule.cluenet.org
 ns4		A	212.71.255.217 ; => wolke.nullroute.eu.org
-ns4		AAAA	2a01:7e00::f03c:91ff:fe18:5b7 ; => wolke.nullroute.eu.org
+ns4		AAAA	2a01:7e00:0:0:f03c:91ff:fe18:5b7 ; => wolke.nullroute.eu.org
+ns4		AAAA	2a01:7e00:e000:16a:0:0:0:1 ; => wolke.nullroute.eu.org
 ns5		A	31.220.42.129 ; => sky.nullroute.eu.org
-ns5		AAAA	2a01:6f0:ffff:1::2 ; => sky.nullroute.eu.org
+ns5		AAAA	2a01:6f0:ffff:1:0:0:0:2 ; => sky.nullroute.eu.org
 
 ;; service SRV records and round-robins
 
