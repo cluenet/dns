@@ -3,7 +3,7 @@ $ORIGIN cluenet.org.
 $TTL 30m
 
 @		SOA	virgule hostmaster (
-				143	; serial
+				144	; serial
 				1h	; refresh
 				15m	; retry
 				14d	; expire
@@ -72,12 +72,6 @@ kdc.syslog	CNAME	virgule			; receives logs from KDCs
 www		CNAME	virgule
 
 ;; servers
-
-abacus		HINFO	armv5tel Linux
-		A	50.76.35.186
-		SSHFP	1 1 3d5724dade61ec17cf93f2c059343529ee46864a ; (ssh-rsa, sha1)
-		SSHFP	1 2 34a62b8fceecb635fddbb8b8c41bf9b5d66c793e2e4bdce485ba85e2737910ce ; (ssh-rsa, sha256)
-		SSHFP	2 2 5ef885a164fba648e8ac0ae3f5e3bab2279a0962267da43e42919b1f98795ee0 ; (ssh-dss, sha256)
 
 aleph		A	81.174.155.55
 		SSHFP	1 1 c8ef9609892203bcf73bae2619adfa1c31a88c11 ; (ssh-rsa, sha1)
