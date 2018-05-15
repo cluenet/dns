@@ -3,7 +3,7 @@ $ORIGIN cluenet.org.
 $TTL 30m
 
 @		SOA	virgule hostmaster (
-				141	; serial
+				142	; serial
 				1h	; refresh
 				15m	; retry
 				14d	; expire
@@ -41,16 +41,7 @@ irc		A	109.74.192.129 ; => virgule.cluenet.org
 irc		AAAA	2a01:7e00:0:0:f03c:91ff:fe96:5efd ; => virgule.cluenet.org
 irc		AAAA	2a01:7e00:e000:1d6:0:0:0:1 ; => virgule.cluenet.org
 
-core		TXT	"core server (LDAP+Kerberos) round-robin"
-core		A	109.74.192.129 ; => virgule.cluenet.org
-core		AAAA	2a01:7e00:0:0:f03c:91ff:fe96:5efd ; => virgule.cluenet.org
-core		AAAA	2a01:7e00:e000:1d6:0:0:0:1 ; => virgule.cluenet.org
-
-kadmin		CNAME	virgule
-kadmin.core	CNAME	kadmin
-kerberos	CNAME	core
-krb5-admin	CNAME	kadmin
-ldap		CNAME	core
+ldap		CNAME	virgule
 
 ns2		A	109.74.192.129 ; => virgule.cluenet.org
 ns2		AAAA	2a01:7e00:0:0:f03c:91ff:fe96:5efd ; => virgule.cluenet.org
@@ -63,23 +54,11 @@ ns5		AAAA	2a01:6f0:ffff:1:0:0:0:2 ; => sky.nullroute.eu.org
 
 ;; service SRV records and round-robins
 
-_kerberos		TXT	"CLUENET.ORG"
-
-_irc._tcp		SRV	0	0	6667	virgule
-_irc._tcp		SRV	0	0	6667	sky.nullroute.eu.org.
-
-_ircs._tcp		SRV	0	0	6697	virgule
-_ircs._tcp		SRV	0	0	6697	sky.nullroute.eu.org.
-
 _kerberos._udp		SRV	0	0	88	virgule
 _kerberos._udp		SRV	5	0	88	wolke.nullroute.eu.org.
 
 _kerberos._tcp		SRV	0	0	88	virgule
 _kerberos._tcp		SRV	5	0	88	wolke.nullroute.eu.org.
-
-_kerberos-adm._tcp	SRV	0	0	749	virgule
-
-_kpasswd._udp		SRV	0	0	464	virgule
 
 _ldap._tcp		SRV	0	0	389	virgule
 
@@ -93,7 +72,6 @@ review.cluebot	CNAME	ghs.google.com.
 *.g		CNAME	ghs.google.com.
 mail		CNAME	ghs.google.com.
 
-a.core		CNAME	www
 irc4		CNAME	irc
 rwho		CNAME	virgule
 kdc.syslog	CNAME	virgule			; receives logs from KDCs
