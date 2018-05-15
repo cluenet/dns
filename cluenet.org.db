@@ -3,7 +3,7 @@ $ORIGIN cluenet.org.
 $TTL 30m
 
 @		SOA	virgule hostmaster (
-				142	; serial
+				143	; serial
 				1h	; refresh
 				15m	; retry
 				14d	; expire
@@ -41,8 +41,6 @@ irc		A	109.74.192.129 ; => virgule.cluenet.org
 irc		AAAA	2a01:7e00:0:0:f03c:91ff:fe96:5efd ; => virgule.cluenet.org
 irc		AAAA	2a01:7e00:e000:1d6:0:0:0:1 ; => virgule.cluenet.org
 
-ldap		CNAME	virgule
-
 ns2		A	109.74.192.129 ; => virgule.cluenet.org
 ns2		AAAA	2a01:7e00:0:0:f03c:91ff:fe96:5efd ; => virgule.cluenet.org
 ns2		AAAA	2a01:7e00:e000:1d6:0:0:0:1 ; => virgule.cluenet.org
@@ -59,10 +57,6 @@ _kerberos._udp		SRV	5	0	88	wolke.nullroute.eu.org.
 
 _kerberos._tcp		SRV	0	0	88	virgule
 _kerberos._tcp		SRV	5	0	88	wolke.nullroute.eu.org.
-
-_ldap._tcp		SRV	0	0	389	virgule
-
-_ldaps._tcp		SRV	0	0	636	virgule
 
 ;; service subdomains
 
