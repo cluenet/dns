@@ -3,7 +3,7 @@ $ORIGIN cluenet.org.
 $TTL 30m
 
 @		SOA	virgule hostmaster (
-				1400	; serial
+				1401	; serial
 				1h	; refresh
 				15m	; retry
 				14d	; expire
@@ -12,7 +12,6 @@ $TTL 30m
 		NS	virgule
 		NS	wolke.nullroute.eu.org.
 
-$TTL 30
 		MX	10 ASPMX.L.GOOGLE.COM.
 		MX	20 ALT1.ASPMX.L.GOOGLE.COM.
 		MX	20 ALT2.ASPMX.L.GOOGLE.COM.
@@ -21,7 +20,6 @@ $TTL 30
 		MX	30 ASPMX4.GOOGLEMAIL.COM.
 		MX	30 ASPMX5.GOOGLEMAIL.COM.
 		TXT	"v=spf1 a mx ptr ~all"
-$TTL 30m
 
 ;; sub-zones
 
