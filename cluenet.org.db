@@ -3,25 +3,22 @@ $ORIGIN cluenet.org.
 $TTL 30m
 
 @		SOA	virgule hostmaster (
-				146	; serial
+				1390	; serial
 				1h	; refresh
 				15m	; retry
 				14d	; expire
 				5m	; minttl
 			)
-		NS	ns2 ; virgule.cluenet.org
-		NS	ns4 ; wolke.nullroute.eu.org
-		NS	ns5 ; sky.nullroute.eu.org -- out-of-date again...
+		NS	virgule
+		NS	wolke.nullroute.eu.org.
 
-		; 2018-09-30 grawity: temporary while I recover my egghelp account
-		MX	10 wolke.nullroute.eu.org.
-;		MX	10 ASPMX.L.GOOGLE.COM.
-;		MX	20 ALT1.ASPMX.L.GOOGLE.COM.
-;		MX	20 ALT2.ASPMX.L.GOOGLE.COM.
-;		MX	30 ASPMX2.GOOGLEMAIL.COM.
-;		MX	30 ASPMX3.GOOGLEMAIL.COM.
-;		MX	30 ASPMX4.GOOGLEMAIL.COM.
-;		MX	30 ASPMX5.GOOGLEMAIL.COM.
+		MX	10 ASPMX.L.GOOGLE.COM.
+		MX	20 ALT1.ASPMX.L.GOOGLE.COM.
+		MX	20 ALT2.ASPMX.L.GOOGLE.COM.
+		MX	30 ASPMX2.GOOGLEMAIL.COM.
+		MX	30 ASPMX3.GOOGLEMAIL.COM.
+		MX	30 ASPMX4.GOOGLEMAIL.COM.
+		MX	30 ASPMX5.GOOGLEMAIL.COM.
 		TXT	"v=spf1 a mx ptr ~all"
 
 ;; sub-zones
