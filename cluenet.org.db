@@ -3,7 +3,7 @@ $ORIGIN cluenet.org.
 $TTL 30m
 
 @		SOA	virgule hostmaster (
-				1391	; serial
+				1400	; serial
 				1h	; refresh
 				15m	; retry
 				14d	; expire
