@@ -3,7 +3,7 @@ $ORIGIN cluenet.org.
 $TTL 30m
 
 @		SOA	virgule hostmaster (
-				1401	; serial
+				1402	; serial
 				1h	; refresh
 				15m	; retry
 				14d	; expire
@@ -48,14 +48,6 @@ ns4		AAAA	2a01:7e00:e000:16a:0:0:0:1 ; => wolke.nullroute.eu.org
 ns5		A	31.220.42.129 ; => sky.nullroute.eu.org
 ns5		AAAA	2a01:6f0:ffff:1:0:0:0:2 ; => sky.nullroute.eu.org
 
-;; service SRV records and round-robins
-
-_kerberos._udp		SRV	0	0	88	virgule
-_kerberos._udp		SRV	5	0	88	wolke.nullroute.eu.org.
-
-_kerberos._tcp		SRV	0	0	88	virgule
-_kerberos._tcp		SRV	5	0	88	wolke.nullroute.eu.org.
-
 ;; service subdomains
 
 report.cluebot	CNAME	bots.wmflabs.org.
@@ -66,7 +58,6 @@ mail		CNAME	ghs.google.com.
 
 irc4		CNAME	irc
 rwho		CNAME	virgule
-kdc.syslog	CNAME	virgule			; receives logs from KDCs
 www		CNAME	virgule
 
 ;; servers
