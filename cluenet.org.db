@@ -3,7 +3,7 @@ $ORIGIN cluenet.org.
 $TTL 30m
 
 @		SOA	virgule hostmaster (
-				1402	; serial
+				1403	; serial
 				1h	; refresh
 				15m	; retry
 				14d	; expire
@@ -73,14 +73,8 @@ eta		CNAME	eta.dyn.cluenet.org.
 gamma		CNAME	gamma.thehawken.org.
 
 hawking		A	198.211.112.112
-		SSHFP	1 1 60f25057945d6cab589e552c8b9968900994a00f ; (ssh-rsa, sha1)
-		SSHFP	1 2 22fd110f6bbd5ad64d8be37eab2b97c72907516dfbc639d7ccd1cf4e8816b51a ; (ssh-rsa, sha256)
-		SSHFP	2 2 deff8ee83f96eebaa04bcb9fa96af757f6dd0d439ffb5bc67a30e6ffaa51592e ; (ssh-dss, sha256)
 
 sigma		A	74.207.250.111
-		SSHFP	1 1 4de6de12e46960207332eae919667a639390a2c9 ; (ssh-rsa, sha1)
-		SSHFP	1 2 1a2cf7ea464e1afd271812a7d05b98567bb48492f02bab0af599b155d6c982f7 ; (ssh-rsa, sha256)
-		SSHFP	2 2 0793fe23bc6f03c4adb7f7ea60a49de62dbe7127a60dcbce6946ce73cdcd5654 ; (ssh-dss, sha256)
 
 virgule		HINFO	x86_64 Linux
 		A	109.74.192.129
