@@ -3,7 +3,7 @@ $ORIGIN cluenet.org.
 $TTL 30m
 
 @		SOA	virgule hostmaster (
-				1412	; serial
+				1413	; serial
 				1h	; refresh
 				15m	; retry
 				14d	; expire
@@ -55,7 +55,6 @@ hawking		A	198.211.112.112
 sigma		A	74.207.250.111
 virgule		HINFO	x86_64 Linux
 		A	109.74.192.129
-		AAAA	2a01:7e00::f03c:91ff:fe96:5efd
 		AAAA	2a01:7e00:e000:1d6::1
 
 ;; Cobi
