@@ -50,13 +50,9 @@ mail		CNAME	ghs.google.com.
 ;; servers
 
 aleph		A	81.174.155.55
-
 eta		CNAME	eta.dyn.cluenet.org.
-
 hawking		A	198.211.112.112
-
 sigma		A	74.207.250.111
-
 virgule		HINFO	x86_64 Linux
 		A	109.74.192.129
 		AAAA	2a01:7e00::f03c:91ff:fe96:5efd
@@ -66,7 +62,7 @@ virgule		HINFO	x86_64 Linux
 		SSHFP	3 2 1e5c24e5d205866b2ecbbcfe77aa18ec0fb2341582d2685f14aa88546ae56ae1 ; (ecdsa-sha2-nistp384, sha256)
 		SSHFP	4 2 b02c37b535435960d4d5adeb00910ee642ebb0fad143c75a236b0b8d8d60b5cc ; (ssh-ed25519, sha256)
 
-;; Cobi has his own section
+;; Cobi
 
 Cobi		A	24.40.136.140
 Cobi		AAAA	2002:1828:88fb:0:aede:48ff:febe:ef03
