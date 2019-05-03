@@ -3,7 +3,7 @@ $ORIGIN cluenet.org.
 $TTL 30m
 
 @		SOA	virgule hostmaster (
-				1404	; serial
+				1405	; serial
 				1h	; refresh
 				15m	; retry
 				14d	; expire
@@ -65,8 +65,6 @@ www		CNAME	virgule
 aleph		A	81.174.155.55
 
 eta		CNAME	eta.dyn.cluenet.org.
-
-gamma		CNAME	gamma.thehawken.org.
 
 hawking		A	198.211.112.112
 
