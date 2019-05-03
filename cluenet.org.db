@@ -3,7 +3,7 @@ $ORIGIN cluenet.org.
 $TTL 30m
 
 @		SOA	virgule hostmaster (
-				1409	; serial
+				1410	; serial
 				1h	; refresh
 				15m	; retry
 				14d	; expire
@@ -49,8 +49,6 @@ review.cluebot	CNAME	ghs.google.com.
 
 *.g		CNAME	ghs.google.com.
 mail		CNAME	ghs.google.com.
-
-irc4		CNAME	irc
 
 ;; servers
 
