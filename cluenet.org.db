@@ -3,7 +3,7 @@ $ORIGIN cluenet.org.
 $TTL 30m
 
 @		SOA	virgule hostmaster (
-				1414	; serial
+				1415	; serial
 				1h	; refresh
 				15m	; retry
 				14d	; expire
@@ -49,9 +49,8 @@ aleph		A	81.174.155.55
 eta		CNAME	eta.dyn.cluenet.org.
 hawking		A	198.211.112.112
 sigma		A	74.207.250.111
-virgule		HINFO	x86_64 Linux
-		A	109.74.192.129
-		AAAA	2a01:7e00:e000:1d6::1
+virgule		A	109.74.192.129
+virgule		AAAA	2a01:7e00:e000:1d6::1
 
 ;; Cobi
 
