@@ -3,7 +3,7 @@ $ORIGIN cluenet.org.
 $TTL 30m
 
 @		SOA	virgule hostmaster (
-				1410	; serial
+				1411	; serial
 				1h	; refresh
 				15m	; retry
 				14d	; expire
@@ -44,9 +44,6 @@ ns4		AAAA	2a01:7e00:e000:16a:0:0:0:1 ; => wolke.nullroute.eu.org
 
 ;; service subdomains
 
-report.cluebot	CNAME	bots.wmflabs.org.
-review.cluebot	CNAME	ghs.google.com.
-
 *.g		CNAME	ghs.google.com.
 mail		CNAME	ghs.google.com.
 
@@ -73,7 +70,6 @@ virgule		HINFO	x86_64 Linux
 
 Cobi		A	24.40.136.140
 Cobi		AAAA	2002:1828:88fb:0:aede:48ff:febe:ef03
-www.cobi	CNAME	ghs.google.com.
 cobiapartment	A	98.212.147.161
 cobigw		A	24.40.136.140
 cobihome	A	24.40.136.140
