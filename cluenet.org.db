@@ -2,7 +2,7 @@
 $ORIGIN cluenet.org.
 $TTL 30m
 
-@		SOA	virgule hostmaster 1417 1h 15m 14d 5m
+@		SOA	virgule hostmaster 1418 1h 15m 14d 5m
 		NS	virgule
 		NS	wolke.nullroute.eu.org.
 
@@ -20,8 +20,6 @@ dyn		NS	virgule
 
 ;; service round-robins
 
-irc		A	31.220.42.129 ; => sky.nullroute.eu.org
-irc		AAAA	2a01:6f0:ffff:1:0:0:0:2 ; => sky.nullroute.eu.org
 irc		A	109.74.192.129 ; => virgule.cluenet.org
 irc		AAAA	2a01:7e00:e000:1d6:0:0:0:1 ; => virgule.cluenet.org
 
