@@ -14,11 +14,7 @@ $TTL 30m
 		MX	30 ASPMX4.GOOGLEMAIL.COM.
 		MX	30 ASPMX5.GOOGLEMAIL.COM.
 
-;; sub-zones
-
 dyn		NS	virgule
-
-;; service round-robins
 
 irc		A	109.74.192.129 ; => virgule.cluenet.org
 irc		AAAA	2a01:7e00:e000:1d6:0:0:0:1 ; => virgule.cluenet.org
@@ -29,12 +25,8 @@ ns2		AAAA	2a01:7e00:e000:1d6:0:0:0:1 ; => virgule.cluenet.org
 ns4		A	212.71.255.217 ; => wolke.nullroute.eu.org
 ns4		AAAA	2a01:7e00:e000:16a:0:0:0:1 ; => wolke.nullroute.eu.org
 
-;; service subdomains
-
 *.g		CNAME	ghs.google.com.
 mail		CNAME	ghs.google.com.
-
-;; servers
 
 aleph		A	81.174.155.55
 eta		CNAME	eta.dyn.cluenet.org.
@@ -42,5 +34,3 @@ hawking		A	198.211.112.112
 sigma		A	74.207.250.111
 virgule		A	109.74.192.129
 virgule		AAAA	2a01:7e00:e000:1d6::1
-
-;; End.
