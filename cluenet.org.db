@@ -2,9 +2,8 @@
 $ORIGIN cluenet.org.
 $TTL 30m
 
-@		SOA	virgule hostmaster 1418 1h 15m 14d 5m
+@		SOA	virgule hostmaster 1419 1h 15m 14d 5m
 		NS	virgule
-		NS	wolke.nullroute.eu.org.
 
 		MX	10 ASPMX.L.GOOGLE.COM.
 		MX	20 ALT1.ASPMX.L.GOOGLE.COM.
@@ -21,9 +20,6 @@ irc		AAAA	2a01:7e00:e000:1d6:0:0:0:1 ; => virgule.cluenet.org
 
 ns2		A	109.74.192.129 ; => virgule.cluenet.org
 ns2		AAAA	2a01:7e00:e000:1d6:0:0:0:1 ; => virgule.cluenet.org
-
-ns4		A	212.71.255.217 ; => wolke.nullroute.eu.org
-ns4		AAAA	2a01:7e00:e000:16a:0:0:0:1 ; => wolke.nullroute.eu.org
 
 *.g		CNAME	ghs.google.com.
 mail		CNAME	ghs.google.com.
