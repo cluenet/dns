@@ -3,7 +3,7 @@ $ORIGIN cluenet.org.
 $TTL 30m
 
 @		SOA	virgule hostmaster (
-				1408	; serial
+				1409	; serial
 				1h	; refresh
 				15m	; retry
 				14d	; expire
@@ -29,10 +29,6 @@ dyn		NS	virgule
 
 ;; service round-robins
 
-@		A	109.74.192.129 ; => virgule.cluenet.org
-@		AAAA	2a01:7e00:0:0:f03c:91ff:fe96:5efd ; => virgule.cluenet.org
-@		AAAA	2a01:7e00:e000:1d6:0:0:0:1 ; => virgule.cluenet.org
-
 irc		A	31.220.42.129 ; => sky.nullroute.eu.org
 irc		AAAA	2a01:6f0:ffff:1:0:0:0:2 ; => sky.nullroute.eu.org
 irc		A	109.74.192.129 ; => virgule.cluenet.org
@@ -55,7 +51,6 @@ review.cluebot	CNAME	ghs.google.com.
 mail		CNAME	ghs.google.com.
 
 irc4		CNAME	irc
-www		CNAME	virgule
 
 ;; servers
 
