@@ -2,13 +2,7 @@
 $ORIGIN cluenet.org.
 $TTL 30m
 
-@		SOA	virgule hostmaster (
-				1415	; serial
-				1h	; refresh
-				15m	; retry
-				14d	; expire
-				5m	; minttl
-			)
+@		SOA	virgule hostmaster 1415 1h 15m 14d 5m
 		NS	virgule
 		NS	wolke.nullroute.eu.org.
 
